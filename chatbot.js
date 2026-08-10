@@ -412,25 +412,41 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
     const input = document.getElementById('chat-input');
     const messages = document.getElementById('chat-messages');
 
+    let savedScrollY = 0;
+
+    function lockScroll() {
+      savedScrollY = window.scrollY;
+      document.documentElement.style.overflow = 'hidden';
+      document.documentElement.style.height = '100%';
+      document.body.style.overflow = 'hidden';
+      document.body.style.height = '100%';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${savedScrollY}px`;
+      document.body.style.width = '100%';
+    }
+
+    function unlockScroll() {
+      document.documentElement.style.overflow = '';
+      document.documentElement.style.height = '';
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, savedScrollY);
+    }
+
     toggle.addEventListener('click', () => {
       panel.hidden = false;
       toggle.hidden = true;
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
-      document.body.style.top = `-${window.scrollY}px`;
+      lockScroll();
       input.focus();
     });
 
     closeBtn.addEventListener('click', () => {
-      const scrollY = document.body.style.top;
       panel.hidden = true;
       toggle.hidden = false;
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-      document.body.style.top = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      unlockScroll();
     });
 
     form.addEventListener('submit', async (e) => {
@@ -513,7 +529,15 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
       window.visualViewport.addEventListener('scroll', resizePanel);
     }
 
-    // Keep input visible when focused — gentle scroll after keyboard settles
+    // Block touch scrolling outside the messages area
+    panel.addEventListener('touchmove', (e) => {
+      // Only allow scroll inside the messages container
+      if (!e.target.closest('.chat-panel__messages')) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    // Keep input visible when focused
     input.addEventListener('focus', () => {
       setTimeout(() => {
         messages.scrollTop = messages.scrollHeight;
