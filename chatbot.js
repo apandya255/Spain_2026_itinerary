@@ -416,13 +416,21 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
       panel.hidden = false;
       toggle.hidden = true;
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.style.top = `-${window.scrollY}px`;
       input.focus();
     });
 
     closeBtn.addEventListener('click', () => {
+      const scrollY = document.body.style.top;
       panel.hidden = true;
       toggle.hidden = false;
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
     });
 
     form.addEventListener('submit', async (e) => {
