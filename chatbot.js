@@ -70,6 +70,20 @@
     }
 
     try {
+      // Always fetch current SHA before saving (in case it changed or wasn't loaded)
+      if (!fileSha) {
+        const getUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FILE}?ref=${GITHUB_BRANCH}`;
+        const getRes = await fetch(getUrl, {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (getRes.ok) {
+          const getData = await getRes.json();
+          fileSha = getData.sha;
+        } else {
+          throw new Error('Could not fetch file SHA');
+        }
+      }
+
       const content = btoa(unescape(encodeURIComponent(JSON.stringify(itinerary, null, 2))));
       const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FILE}`;
 
@@ -91,6 +105,11 @@
 
       if (!res.ok) {
         const errData = await res.text();
+        // If SHA conflict, refetch and retry once
+        if (res.status === 409) {
+          fileSha = null;
+          return await saveToGitHub();
+        }
         throw new Error(`GitHub save failed: ${res.status} ${errData}`);
       }
 
