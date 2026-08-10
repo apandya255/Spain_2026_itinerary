@@ -517,21 +517,6 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
       return div;
     }
 
-    // --- iOS KEYBOARD FIX ---
-    // Resize chat panel to visual viewport when keyboard opens/closes
-    if (window.visualViewport) {
-      const resizePanel = () => {
-        if (!panel.hidden) {
-          const vvh = window.visualViewport.height;
-          const vvOffset = window.visualViewport.offsetTop;
-          panel.style.height = `${vvh}px`;
-          panel.style.top = `${vvOffset}px`;
-        }
-      };
-      window.visualViewport.addEventListener('resize', resizePanel);
-      window.visualViewport.addEventListener('scroll', resizePanel);
-    }
-
     // Block touch scrolling outside the messages area
     panel.addEventListener('touchmove', (e) => {
       // Only allow scroll inside the messages container
