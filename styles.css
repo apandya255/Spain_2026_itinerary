@@ -5,13 +5,13 @@
 
 /* --- DESIGN TOKENS --- */
 :root {
-  --deep-navy: #17324D;
-  --med-blue: #2F7F96;
-  --sea-glass: #8FB8B0;
-  --warm-sand: #E8D7BE;
-  --terracotta: #B66A3C;
-  --ivory: #FBF8F2;
-  --charcoal: #243447;
+  --deep-navy: #1B2A4A;
+  --med-blue: #C8502D;
+  --sea-glass: #E8A838;
+  --warm-sand: #FDF0DC;
+  --terracotta: #A31621;
+  --ivory: #FFFBF5;
+  --charcoal: #2C2C2C;
   --white: #FFFFFF;
 
   --color-heading: var(--deep-navy);
