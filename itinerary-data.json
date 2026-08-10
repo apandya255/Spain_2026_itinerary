@@ -85,63 +85,63 @@
       "theme": "Sagrada Família, Passeig de Gràcia, Casa Batlló & Gràcia",
       "events": [
         {
-          "time": "07:30",
+          "time": "09:00",
           "title": "Breakfast at W Barcelona",
           "details": "Hotel breakfast with Mediterranean sea views.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "09:00",
+          "time": "10:30",
           "title": "Sagrada Família",
           "details": "Gaudí's unfinished masterpiece — one of the most visited buildings on Earth. Soaring nave, forest-like columns, extraordinary stained glass. Allow 2 hours.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Sagrada+Familia+Barcelona"
         },
         {
-          "time": "11:15",
+          "time": "12:45",
           "title": "Avinguda de Gaudí",
           "details": "Tree-lined pedestrian boulevard connecting Sagrada Família to Hospital de Sant Pau. Beautiful Art Nouveau hospital exterior. Coffee stop.",
           "location": "https://maps.google.com/?q=Avinguda+de+Gaudi+Barcelona"
         },
         {
-          "time": "12:00",
+          "time": "13:30",
           "title": "Passeig de Gràcia",
           "details": "Barcelona's grandest boulevard. Luxury shopping, modernista architecture, Casa Milà (La Pedrera) exterior.",
           "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
         },
         {
-          "time": "13:00",
+          "time": "14:30",
           "title": "Casa Batlló",
           "details": "Gaudí's fantastical renovation — bone-like balconies, dragon-scale roof, shimmering facade. One of Barcelona's most photographed buildings.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Casa+Batllo+Barcelona"
         },
         {
-          "time": "14:30",
+          "time": "16:00",
           "title": "Lunch in Eixample",
           "details": "Barcelona's grid-plan neighbourhood. Wide sidewalk terraces, modernista buildings, excellent restaurant density.",
           "location": "https://maps.google.com/?q=Eixample+Barcelona+restaurants"
         },
         {
-          "time": "16:00",
+          "time": "17:30",
           "title": "Return to W Barcelona",
           "details": "Afternoon reset at the hotel: swim, pool, beach, nap. The W makes the trip better by giving you this break.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "18:45",
+          "time": "20:15",
           "title": "Gràcia",
           "details": "Village-like neighbourhood with bohemian squares, independent shops, and local café culture. Plaça de la Vila de Gràcia, Plaça del Sol, Plaça de la Virreina.",
           "location": "https://maps.google.com/?q=Gracia+neighbourhood+Barcelona"
         },
         {
-          "time": "20:30",
+          "time": "22:00",
           "title": "Dinner in Gràcia",
           "details": "Neighbourhood restaurants serving Catalan home cooking, natural wine bars, and relaxed terrace dining away from tourist crowds.",
           "location": "https://maps.google.com/?q=Gracia+Barcelona+restaurants"
         },
         {
-          "time": "22:30",
+          "time": "24:00",
           "title": "Return to W Barcelona",
           "details": "Evening drink at Eclipse bar (26th floor) or the lobby lounge. No travel needed after.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
@@ -156,58 +156,58 @@
       "theme": "Park Güell, Montjuïc, W Beach Afternoon & Barceloneta Evening",
       "events": [
         {
-          "time": "08:00",
+          "time": "09:00",
           "title": "Breakfast at W",
           "details": "Last morning at the W before Costa Brava tomorrow.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "09:30",
+          "time": "10:30",
           "title": "Park Güell",
           "details": "Gaudí's hilltop park — mosaic salamander, serpentine bench with city views, Hypostyle Hall with 86 columns, gingerbread-style gatehouses. UNESCO World Heritage Site.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Park+Guell+Barcelona"
         },
         {
-          "time": "11:30",
+          "time": "12:30",
           "title": "Gràcia Coffee",
           "details": "Come down from the park into Gràcia's charming streets for coffee and a pastry.",
           "location": "https://maps.google.com/?q=Gracia+neighbourhood+Barcelona"
         },
         {
-          "time": "12:30",
+          "time": "13:30",
           "title": "Lunch",
           "details": "Eat before heading to Montjuïc. Good Catalan restaurants in lower Gràcia or Eixample.",
           "location": "https://maps.google.com/?q=Gracia+Barcelona+restaurants"
         },
         {
-          "time": "14:15",
+          "time": "15:15",
           "title": "Montjuïc",
           "details": "Hilltop with panoramic Barcelona views — MNAC palace, 1992 Olympic stadium, Jardins de Mossèn Costa, Mirador del Migdia. Don't try to walk the entire hill.",
           "location": "https://maps.google.com/?q=Montjuic+Barcelona"
         },
         {
-          "time": "16:30",
+          "time": "17:30",
           "title": "W Barcelona Beach / Pool Afternoon",
           "details": "Proper chunk of afternoon enjoying the hotel: infinity pool, beach access, spa, cocktails at WET deck. Transition from city sightseeing toward coastal vacation.",
           "highlight": true,
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "19:15",
+          "time": "20:15",
           "title": "Barceloneta Walk",
           "details": "Walk from the W along the beachfront promenade through the old fishing neighbourhood. Tapas bars, local life, sunset views.",
           "location": "https://maps.google.com/?q=Barceloneta+Beach+Barcelona"
         },
         {
-          "time": "20:30",
+          "time": "21:30",
           "title": "Seafood Dinner",
           "details": "Major Barcelona dinner: grilled Mediterranean fish, gambas al ajillo, seafood rice, fideuà. Historic Barceloneta restaurants steps from the beach.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Barceloneta+Barcelona+seafood+restaurant"
         },
         {
-          "time": "22:30",
+          "time": "23:30",
           "title": "Walk Back to W",
           "details": "Beachfront promenade back to the hotel along the illuminated waterfront. Last night at the W.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
@@ -222,62 +222,62 @@
       "theme": "W Barcelona → Begur → Aiguablava",
       "events": [
         {
-          "time": "07:30",
+          "time": "09:00",
           "title": "Breakfast",
           "details": "Final breakfast at the W with sea views.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "08:15",
+          "time": "09:45",
           "title": "Checkout from W Barcelona",
           "details": "Collect luggage and prepare to depart the waterfront.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "08:30",
+          "time": "10:00",
           "title": "Pick Up Rental Car",
           "details": "Arrange pickup location to avoid driving through central Barcelona. Load luggage and head north.",
           "location": "https://maps.google.com/?q=Barcelona+car+rental"
         },
         {
-          "time": "09:00",
+          "time": "10:30",
           "title": "Drive to Begur",
           "details": "~1.5–2 hours via AP-7 motorway through the Catalan countryside to the Costa Brava coast.",
           "location": "https://maps.google.com/?q=Begur+Girona+Spain"
         },
         {
-          "time": "~11:00",
+          "time": "~12:30",
           "title": "Begur Arrival",
           "details": "Hilltop medieval town with a ruined castle, colourful colonial-era houses, and views across the Empordà plain to the sea.",
           "location": "https://maps.google.com/?q=Begur+Girona+Spain"
         },
         {
-          "time": "11:30",
+          "time": "13:00",
           "title": "Aiguablava",
           "details": "One of the Costa Brava's finest coves — crystal-clear turquoise water, pine-fringed cliffs, fine sand. Swimming, snorkeling, kayaking, paddleboarding.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Platja+Aiguablava+Begur"
         },
         {
-          "time": "~13:30",
+          "time": "~15:00",
           "title": "Coastal Lunch",
           "details": "Long Mediterranean lunch at a terrace overlooking the water. Fresh fish, local wines, anchovies, grilled prawns.",
           "location": "https://maps.google.com/?q=Aiguablava+restaurant+Begur"
         },
         {
-          "time": "15:30",
+          "time": "17:00",
           "title": "Hotel / Siesta",
           "details": "Check in properly to the Costa Brava hotel. Shower, rest, enjoy the quieter pace.",
           "location": "https://maps.google.com/?q=Begur+hotels"
         },
         {
-          "time": "18:00",
+          "time": "19:30",
           "title": "Begur Old Town",
           "details": "Explore the medieval streets as the temperature drops. Walk up to Begur Castle for 360° views across the Empordà to the Pyrenees and Mediterranean.",
           "location": "https://maps.google.com/?q=Castell+de+Begur"
         },
         {
-          "time": "20:30",
+          "time": "22:00",
           "title": "Dinner in Begur",
           "details": "Dinner in one of the village squares. Catalan cuisine, grilled meats, local Empordà wines.",
           "location": "https://maps.google.com/?q=Begur+restaurants"
@@ -292,57 +292,57 @@
       "theme": "Calella de Palafrugell, Camí de Ronda, Llafranc, Pals & Peratallada",
       "events": [
         {
-          "time": "08:00",
+          "time": "09:00",
           "title": "Breakfast",
           "details": "Morning meal at the hotel before a full coastal day.",
           "location": "https://maps.google.com/?q=Begur+hotels"
         },
         {
-          "time": "09:00",
+          "time": "10:00",
           "title": "Calella de Palafrugell",
           "details": "Postcard-perfect fishing village — whitewashed houses with blue shutters, small pebbly beaches, Port Bo arcades. The classic Costa Brava image.",
           "location": "https://maps.google.com/?q=Calella+de+Palafrugell"
         },
         {
-          "time": "10:00",
+          "time": "11:00",
           "title": "Camí de Ronda",
           "details": "Ancient coastal footpath carved into the cliffs. Walk the Calella → Llafranc section: pine-shaded trails, turquoise coves, rocky headlands. One of the trip's top experiences.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Cami+de+Ronda+Calella+Llafranc"
         },
         {
-          "time": "11:00",
+          "time": "12:00",
           "title": "Llafranc",
           "details": "Elegant crescent beach with a marina, seafront cafés, and the Far de Sant Sebastià lighthouse on the headland above.",
           "location": "https://maps.google.com/?q=Llafranc+Palafrugell"
         },
         {
-          "time": "12:30",
+          "time": "13:30",
           "title": "Long Seafood Lunch",
           "details": "Proper coastal feast: local anchovies, gambas, suquet de peix, arròs negre, fideuà. Eat with views of the Mediterranean.",
           "location": "https://maps.google.com/?q=Llafranc+seafood+restaurant"
         },
         {
-          "time": "14:30",
+          "time": "15:30",
           "title": "Swim",
           "details": "Return to the water at Llafranc or a nearby cove. Let lunch settle. No rushing to the car.",
           "location": "https://maps.google.com/?q=Llafranc+beach"
         },
         {
-          "time": "16:45",
+          "time": "17:45",
           "title": "Pals",
           "details": "Perfectly preserved medieval hilltop village — 10th-century Romanesque tower, cobblestone streets, stone arches, panoramic rice-field views.",
           "location": "https://maps.google.com/?q=Pals+medieval+village+Girona"
         },
         {
-          "time": "18:15",
+          "time": "19:15",
           "title": "Peratallada",
           "details": "One of Catalonia's best-preserved medieval villages. Honey-coloured stone, moat-carved streets, arched passageways. Stunning in golden-hour light.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Peratallada+Girona"
         },
         {
-          "time": "20:00",
+          "time": "21:00",
           "title": "Dinner",
           "details": "Eat in Peratallada's atmospheric main square, or drive back to Begur. Catalan country cooking at its best.",
           "location": "https://maps.google.com/?q=Peratallada+restaurants"
@@ -357,57 +357,57 @@
       "theme": "Costa Brava → Le Méridien, Relaxed Final Barcelona Day",
       "events": [
         {
-          "time": "08:00",
+          "time": "09:00",
           "title": "Breakfast in Costa Brava",
           "details": "Final morning on the coast. Enjoy the quiet before heading back to the city.",
           "location": "https://maps.google.com/?q=Begur+hotels"
         },
         {
-          "time": "09:00",
+          "time": "10:00",
           "title": "Leave for Barcelona",
           "details": "Drive south on AP-7. ~1.5–2 hours back to the city.",
           "location": "https://maps.google.com/?q=AP-7+motorway+Barcelona"
         },
         {
-          "time": "~11:00",
+          "time": "~12:00",
           "title": "Return Rental Car + Le Méridien",
           "details": "Drop the car. Le Méridien sits directly on La Rambla — walk into Gothic Quarter, Plaça Catalunya, and Passeig de Gràcia in minutes.",
           "location": "https://maps.google.com/?q=Le+Meridien+Barcelona"
         },
         {
-          "time": "12:00",
+          "time": "13:00",
           "title": "Central Barcelona Walk",
           "details": "Stroll from the hotel into the heart of the city: Plaça Catalunya → La Rambla → Gothic Quarter → Plaça Reial. Intentionally easy.",
           "location": "https://maps.google.com/?q=La+Rambla+Barcelona"
         },
         {
-          "time": "13:30",
+          "time": "14:30",
           "title": "Lunch",
           "details": "Central Barcelona lunch — plenty of options within 5 minutes of Le Méridien.",
           "location": "https://maps.google.com/?q=La+Rambla+Barcelona+restaurants"
         },
         {
-          "time": "15:00",
+          "time": "16:00",
           "title": "Le Méridien Break",
           "details": "Relax at the hotel. Organize bags for tomorrow's departure. Use the lounge.",
           "location": "https://maps.google.com/?q=Le+Meridien+Barcelona"
         },
         {
-          "time": "17:00",
+          "time": "18:00",
           "title": "Flexible Final Barcelona Block",
           "details": "Choose what you loved most: A) Passeig de Gràcia shopping, B) El Born boutiques, C) Gothic Quarter revisit, D) Palau de la Música Catalana, E) Port Vell sunset. Skip another beach afternoon.",
           "choice": true,
           "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
         },
         {
-          "time": "20:30",
+          "time": "21:30",
           "title": "Farewell Dinner",
           "details": "Make this the best or most celebratory dinner of the entire trip. Dress up, splurge, toast to the week.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Barcelona+fine+dining+restaurant"
         },
         {
-          "time": "22:30",
+          "time": "23:30",
           "title": "Final Barcelona Walk",
           "details": "Walk back through the illuminated Gothic Quarter and La Rambla to Le Méridien.",
           "location": "https://maps.google.com/?q=Barri+Gotic+Barcelona"
@@ -422,26 +422,26 @@
       "theme": "Le Méridien + Final Half Day",
       "events": [
         {
-          "time": "08:00",
+          "time": "09:00",
           "title": "Breakfast",
           "details": "No rush. Final morning in Barcelona at the hotel.",
           "location": "https://maps.google.com/?q=Le+Meridien+Barcelona"
         },
         {
-          "time": "09:00",
+          "time": "10:00",
           "title": "Final Walk",
           "details": "Last stroll through Barcelona. Option A: Gothic Quarter → Plaça Reial → La Rambla. Option B: Plaça Catalunya → Passeig de Gràcia. Coffee, pastries, souvenirs, photos.",
           "choice": true,
           "location": "https://maps.google.com/?q=Placa+Catalunya+Barcelona"
         },
         {
-          "time": "10:30",
+          "time": "11:30",
           "title": "Back to Le Méridien",
           "details": "Return to the hotel. Finish packing, collect luggage, prepare for checkout.",
           "location": "https://maps.google.com/?q=Le+Meridien+Barcelona"
         },
         {
-          "time": "~12:00",
+          "time": "~13:00",
           "title": "Checkout / Airport Transfer",
           "details": "Taxi to Barcelona-El Prat Airport. Target arrival ~3 hours before international departure.",
           "location": "https://maps.google.com/?q=Barcelona+El+Prat+Airport"
