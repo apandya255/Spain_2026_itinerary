@@ -158,25 +158,25 @@
         },
         {
           "time": "10:30",
+          "title": "Gràcia Coffee & Stroll",
+          "details": "Enjoy a relaxed morning coffee and pastry in the charming Gràcia neighborhood before heading to Park Güell.",
+          "location": "https://maps.google.com/?q=Gracia+neighbourhood+Barcelona"
+        },
+        {
+          "time": "12:00",
           "title": "Park Güell",
-          "details": "Gaudí's hilltop park — mosaic salamander, serpentine bench with city views, Hypostyle Hall with 86 columns, gingerbread-style gatehouses. UNESCO World Heritage Site.",
+          "details": "Gaudí's hilltop park — mosaic salamander, serpentine bench with city views, Hypostyle Hall with 86 columns, gingerbread-style gatehouses. UNESCO World Heritage Site. Allow 2 hours.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Park+Guell+Barcelona"
         },
         {
-          "time": "12:30",
-          "title": "Gràcia Coffee",
-          "details": "Come down from the park into Gràcia's charming streets for coffee and a pastry.",
-          "location": "https://maps.google.com/?q=Gracia+neighbourhood+Barcelona"
-        },
-        {
-          "time": "13:30",
-          "title": "Lunch",
-          "details": "Eat before heading to Montjuïc. Good Catalan restaurants in lower Gràcia or Eixample.",
+          "time": "14:00",
+          "title": "Lunch near Park Güell / Gràcia",
+          "details": "Grab a casual lunch in the area after your visit to the park.",
           "location": "https://maps.google.com/?q=Gracia+Barcelona+restaurants"
         },
         {
-          "time": "15:15",
+          "time": "15:30",
           "title": "Montjuïc",
           "details": "Hilltop with panoramic Barcelona views — MNAC palace, 1992 Olympic stadium, Jardins de Mossèn Costa, Mirador del Migdia. Don't try to walk the entire hill.",
           "location": "https://maps.google.com/?q=Montjuic+Barcelona"
