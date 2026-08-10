@@ -117,26 +117,26 @@
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "19:00",
+          "time": "18:30",
           "title": "Early Dinner/Tapas near Casa Batlló",
           "details": "Grab an early dinner or some tapas in the Eixample area before your Magic Night experience. This allows for a more relaxed evening.",
           "location": "https://maps.google.com/?q=Eixample+Barcelona+restaurants"
         },
         {
-          "time": "20:30",
+          "time": "20:00",
           "title": "Casa Batlló Magic Night",
           "details": "Experience Gaudí's masterpiece illuminated at night, often with live music on the rooftop terrace and a drink. A truly magical and memorable evening. Book tickets in advance!",
           "highlight": true,
           "location": "https://maps.google.com/?q=Casa+Batllo+Barcelona"
         },
         {
-          "time": "22:30",
+          "time": "22:00",
           "title": "Post-Magic Night Drink / Stroll",
           "details": "Enjoy a final drink on Passeig de Gràcia or a leisurely stroll back to the W Barcelona, soaking in the evening atmosphere.",
           "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
         },
         {
-          "time": "23:30",
+          "time": "23:00",
           "title": "Return to W Barcelona",
           "details": "Taxi back to the hotel after a magical evening.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
