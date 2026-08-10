@@ -426,11 +426,25 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
             parsed = { action: 'none', message: cleaned.trim() || reply };
           }
         } catch (e) {
-          parsed = { action: 'none', message: reply };
+          // If JSON parsing fails, treat the whole reply as a message
+          // But clean out any JSON-looking garbage
+          let cleanMsg = reply.replace(/<think>[\s\S]*?<\/think>/g, '').replace(/```[\s\S]*?```/g, '').trim();
+          parsed = { action: 'none', message: cleanMsg || 'I could not process that request. Try rephrasing.' };
         }
 
         if (parsed.action === 'none') {
-          appendMessage(parsed.message || reply, 'bot');
+          // Extract just the human-readable message, never show raw JSON
+          let msg = parsed.message || '';
+          // If the message itself looks like JSON, extract the message field from it
+          if (msg.startsWith('{') || msg.startsWith('[')) {
+            try {
+              const inner = JSON.parse(msg);
+              msg = inner.message || inner.text || inner.response || 'Done.';
+            } catch(e) {
+              msg = 'I understood your request but couldn\'t format a clean response. Try again?';
+            }
+          }
+          appendMessage(msg, 'bot');
         } else {
           applyChanges(parsed);
           appendMessage(describeChanges(parsed), 'bot');
