@@ -161,6 +161,14 @@ ul, ol { list-style: none; }
 .chip--recommended { background: var(--sea-glass); color: var(--deep-navy); }
 .chip--flexible { background: var(--warm-sand); color: var(--charcoal); }
 
+a.chip {
+  text-decoration: none;
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  touch-action: manipulation;
+}
+
 /* --- HERO --- */
 .hero {
   position: relative;
