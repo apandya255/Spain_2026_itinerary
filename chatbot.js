@@ -494,6 +494,31 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
       messages.scrollTop = messages.scrollHeight;
       return div;
     }
+
+    // --- iOS KEYBOARD FIX ---
+    // Resize chat panel to visual viewport when keyboard opens/closes
+    if (window.visualViewport) {
+      const resizePanel = () => {
+        if (!panel.hidden) {
+          const vvh = window.visualViewport.height;
+          const vvOffset = window.visualViewport.offsetTop;
+          panel.style.height = `${vvh}px`;
+          panel.style.top = `${vvOffset}px`;
+          // Scroll messages to bottom when keyboard opens
+          messages.scrollTop = messages.scrollHeight;
+        }
+      };
+      window.visualViewport.addEventListener('resize', resizePanel);
+      window.visualViewport.addEventListener('scroll', resizePanel);
+    }
+
+    // Scroll input into view when focused (fallback for older browsers)
+    input.addEventListener('focus', () => {
+      setTimeout(() => {
+        input.scrollIntoView({ block: 'nearest' });
+        messages.scrollTop = messages.scrollHeight;
+      }, 300);
+    });
   }
 
   function describeChanges(parsed) {

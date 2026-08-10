@@ -30,12 +30,17 @@
 /* Panel — full screen on mobile */
 .chat-panel {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 300;
   background: #fff;
   display: flex;
   flex-direction: column;
   font-family: 'Inter', -apple-system, sans-serif;
+  height: 100vh;
+  height: 100dvh;
 }
 
 .chat-panel[hidden] {
@@ -143,6 +148,8 @@
   border-top: 1px solid rgba(23, 50, 77, 0.08);
   background: #fff;
   flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
 }
 
 .chat-panel__input input {
