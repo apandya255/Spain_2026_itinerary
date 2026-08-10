@@ -439,43 +439,36 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
         typing.remove();
 
         let parsed;
-        try {
-          // Strip any thinking tags, markdown, or text before/after JSON
-          let cleaned = reply;
-          // Remove <think>...</think> blocks (DeepSeek R1)
-          cleaned = cleaned.replace(/<think>[\s\S]*?<\/think>/g, '');
-          // Remove markdown code fences
-          cleaned = cleaned.replace(/```json\n?/g, '').replace(/```\n?/g, '');
-          // Find the JSON object in the response
-          const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
-          if (jsonMatch) {
+        // Strip thinking tags and code fences
+        let cleaned = reply;
+        cleaned = cleaned.replace(/<think>[\s\S]*?<\/think>/g, '');
+        cleaned = cleaned.replace(/```json\n?/g, '').replace(/```\n?/g, '');
+        cleaned = cleaned.trim();
+
+        // Try to find and parse JSON
+        const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+        if (jsonMatch) {
+          try {
             parsed = JSON.parse(jsonMatch[0]);
-          } else {
-            parsed = { action: 'none', message: cleaned.trim() || reply };
+          } catch (e) {
+            // JSON-like but invalid — treat as plain text
+            parsed = null;
           }
-        } catch (e) {
-          // If JSON parsing fails, treat the whole reply as a message
-          // But clean out any JSON-looking garbage
-          let cleanMsg = reply.replace(/<think>[\s\S]*?<\/think>/g, '').replace(/```[\s\S]*?```/g, '').trim();
-          parsed = { action: 'none', message: cleanMsg || 'I could not process that request. Try rephrasing.' };
         }
 
-        if (parsed.action === 'none') {
-          // Extract just the human-readable message, never show raw JSON
-          let msg = parsed.message || '';
-          // If the message itself looks like JSON, extract the message field from it
-          if (msg.startsWith('{') || msg.startsWith('[')) {
-            try {
-              const inner = JSON.parse(msg);
-              msg = inner.message || inner.text || inner.response || 'Done.';
-            } catch(e) {
-              msg = 'I understood your request but couldn\'t format a clean response. Try again?';
-            }
+        // If we got valid parsed JSON with an action
+        if (parsed && parsed.action) {
+          if (parsed.action === 'none') {
+            appendMessage(parsed.message || cleaned, 'bot');
+          } else {
+            applyChanges(parsed);
+            appendMessage(describeChanges(parsed), 'bot');
           }
-          appendMessage(msg, 'bot');
         } else {
-          applyChanges(parsed);
-          appendMessage(describeChanges(parsed), 'bot');
+          // No valid JSON action — show the reply as plain text conversation
+          // Remove any leftover JSON artifacts
+          let plainMsg = cleaned.replace(/^\{.*\}$/s, '').trim() || cleaned;
+          appendMessage(plainMsg, 'bot');
         }
       } catch (err) {
         typing.remove();
