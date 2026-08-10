@@ -330,6 +330,92 @@ a.chip {
   opacity: 0.65;
 }
 
+/* --- CALENDAR --- */
+.calendar {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.calendar__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+.calendar__day {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.75rem;
+  background: var(--color-card);
+  border: 1px solid rgba(23,50,77,0.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.calendar__day--costa {
+  background: rgba(143,184,176,0.08);
+  border-color: rgba(47,127,150,0.12);
+}
+
+.calendar__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.calendar__dow {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--med-blue);
+  letter-spacing: 0.03em;
+}
+
+.calendar__num {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.calendar__events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.calendar__tag {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 0.15rem 0.45rem;
+  border-radius: 100px;
+  background: rgba(23,50,77,0.05);
+  color: var(--charcoal);
+  white-space: nowrap;
+}
+
+.calendar__tag--highlight {
+  background: rgba(182,106,60,0.12);
+  color: var(--terracotta);
+  font-weight: 600;
+}
+
+.calendar__tag--travel {
+  background: rgba(47,127,150,0.1);
+  color: var(--med-blue);
+  font-weight: 600;
+}
+
+.calendar__hotel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  opacity: 0.6;
+  white-space: nowrap;
+  text-align: right;
+}
+
 /* --- BOOK FIRST --- */
 .book-first {
   padding: var(--space-xl) 0 var(--space-2xl);
@@ -757,6 +843,11 @@ a.chip {
 
   .glance__grid { grid-template-columns: repeat(7, 1fr); }
   .glance__card { padding: 1rem 0.5rem; }
+
+  .calendar__grid { grid-template-columns: repeat(7, 1fr); gap: 0.6rem; }
+  .calendar__day { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; text-align: center; padding: 0.75rem 0.5rem; }
+  .calendar__events { justify-content: center; }
+  .calendar__hotel { text-align: center; }
 
   .book-first__grid { grid-template-columns: repeat(2, 1fr); }
 
