@@ -145,6 +145,7 @@ Possible actions:
 - "swap_events": swap two events within a day. changes is [{dayId, eventIndexA, eventIndexB}].
 - "swap_days": swap all events between two days. changes is [{dayIdA, dayIdB}].
 - "move_event": move an event from one day to another. changes is [{fromDayId, eventIndex, toDayId, insertIndex}].
+- "replace_day": replace an entire day's events and optionally its theme. changes is [{dayId, theme (optional), events: [{time, title, details, location (optional), highlight (optional), choice (optional)}]}]. Use this when the user asks to restructure, redo, or completely change a day.
 - "none": no change needed, just a conversational response.
 
 For "none" action or when just answering a question, respond with:
@@ -279,6 +280,19 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
               const timeB = b.time.replace(/[^0-9:]/g, '') || '99:99';
               return timeA.localeCompare(timeB);
             });
+          }
+        });
+        break;
+
+      case 'replace_day':
+        changes.forEach(c => {
+          const day = itinerary.days.find(d => d.id === c.dayId);
+          if (day) {
+            if (c.theme) day.theme = c.theme;
+            if (c.base) day.base = c.base;
+            if (c.events && Array.isArray(c.events)) {
+              day.events = c.events;
+            }
           }
         });
         break;
@@ -488,6 +502,7 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
       case 'swap_events': return `✓ Swapped the events.`;
       case 'swap_days': return `✓ Swapped the days.`;
       case 'move_event': return `✓ Moved the event.`;
+      case 'replace_day': return `✓ Rebuilt Day ${parsed.changes.map(c => c.dayId).join(', ')} with the new schedule.`;
       default: return `✓ Change applied.`;
     }
   }
