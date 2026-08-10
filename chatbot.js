@@ -306,6 +306,7 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
       timeline.innerHTML = day.events.map(event => {
         const highlightClass = event.highlight ? ' timeline-item--highlight' : '';
         const choiceClass = event.choice ? ' timeline-item--choice' : '';
+        const mapLink = event.location ? `<a href="${event.location}" target="_blank" rel="noopener" class="timeline-item__map">📍 View on map</a>` : '';
         return `
           <article class="timeline-item${highlightClass}${choiceClass} is-revealed">
             <div class="timeline-item__time">${event.time}</div>
@@ -316,6 +317,7 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
               </button>
               <div class="timeline-item__details" hidden>
                 <p>${event.details}</p>
+                ${mapLink}
               </div>
             </div>
           </article>

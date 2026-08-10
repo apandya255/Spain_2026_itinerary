@@ -528,6 +528,19 @@ a.chip {
   color: var(--charcoal);
 }
 
+.timeline-item__map {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--med-blue);
+  text-decoration: none;
+}
+
+.timeline-item__map:hover {
+  text-decoration: underline;
+}
+
 .timeline-item .chip {
   display: inline-block;
   margin-bottom: 0.25rem;
