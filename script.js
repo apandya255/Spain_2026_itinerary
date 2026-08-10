@@ -152,30 +152,32 @@
   const calClose = document.getElementById('cal-close');
 
   if (calOpen && calOverlay && calClose) {
-    calOpen.addEventListener('click', () => {
+    const openCal = () => {
       calOverlay.hidden = false;
       document.body.style.overflow = 'hidden';
-    });
-
-    calClose.addEventListener('click', () => {
+    };
+    const closeCal = () => {
       calOverlay.hidden = true;
       document.body.style.overflow = '';
-    });
+    };
+
+    calOpen.addEventListener('click', openCal);
+    calClose.addEventListener('click', closeCal);
+
+    // Hero calendar button
+    const heroCalBtn = document.getElementById('hero-cal-btn');
+    if (heroCalBtn) heroCalBtn.addEventListener('click', openCal);
 
     // Close on backdrop click
     calOverlay.addEventListener('click', (e) => {
-      if (e.target === calOverlay) {
-        calOverlay.hidden = true;
-        document.body.style.overflow = '';
-      }
+      if (e.target === calOverlay) closeCal();
     });
 
     // Day cell clicks — scroll to that day and close calendar
     calOverlay.querySelectorAll('[data-calday]').forEach(cell => {
       cell.addEventListener('click', (e) => {
         e.preventDefault();
-        calOverlay.hidden = true;
-        document.body.style.overflow = '';
+        closeCal();
         const dayId = cell.getAttribute('href');
         const target = document.querySelector(dayId);
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });

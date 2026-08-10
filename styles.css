@@ -236,6 +236,14 @@ a.chip {
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .hero__cta-group {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+}
+
 /* --- STICKY NAV --- */
 .day-nav {
   position: sticky;
@@ -357,6 +365,7 @@ a.chip {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  overflow-y: auto;
 }
 
 .cal-overlay[hidden] { display: none; }
@@ -365,9 +374,11 @@ a.chip {
   background: #fff;
   border-radius: 12px;
   width: 100%;
-  max-width: 400px;
+  max-width: 720px;
   padding: 1.25rem;
   box-shadow: 0 16px 48px rgba(23,50,77,0.25);
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
 }
 
 .cal-overlay__header {
@@ -378,14 +389,14 @@ a.chip {
 }
 
 .cal-overlay__header h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #17324D;
 }
 
 .cal-overlay__close {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -394,71 +405,96 @@ a.chip {
   -webkit-tap-highlight-color: transparent;
 }
 
-.cal-overlay__grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0.25rem;
-  text-align: center;
+/* Week view */
+.cal-week {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.cal-overlay__dow {
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #2F7F96;
-  padding-bottom: 0.4rem;
+.cal-week__day {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(23,50,77,0.02);
+  border: 1px solid rgba(23,50,77,0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.cal-overlay__cell {
-  aspect-ratio: 1;
+.cal-week__day:hover {
+  background: rgba(47,127,150,0.06);
+  border-color: rgba(47,127,150,0.15);
+}
+
+.cal-week__day--costa {
+  background: rgba(143,184,176,0.06);
+  border-color: rgba(143,184,176,0.15);
+}
+
+.cal-week__day--costa:hover {
+  background: rgba(143,184,176,0.12);
+}
+
+.cal-week__date {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  font-size: 0.82rem;
-  color: #243447;
-  text-decoration: none;
+  min-width: 2.8rem;
+  flex-shrink: 0;
 }
 
-.cal-overlay__cell--empty {
-  opacity: 0;
-}
-
-.cal-overlay__cell--trip {
-  background: rgba(47,127,150,0.1);
+.cal-week__dow {
+  font-size: 0.6rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-
-.cal-overlay__cell--trip:hover {
-  background: rgba(47,127,150,0.2);
-}
-
-.cal-overlay__cell--trip strong {
-  font-size: 0.9rem;
-  display: block;
-  color: #17324D;
-}
-
-.cal-overlay__cell--trip small {
-  font-size: 0.55rem;
-  font-weight: 500;
+  text-transform: uppercase;
   color: #2F7F96;
-  margin-top: 0.1rem;
 }
 
-.cal-overlay__cell--costa {
-  background: rgba(143,184,176,0.15);
+.cal-week__num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #17324D;
+  line-height: 1.1;
 }
 
-.cal-overlay__cell--costa:hover {
-  background: rgba(143,184,176,0.25);
+.cal-week__info {
+  flex: 1;
+  min-width: 0;
 }
 
-.cal-overlay__cell--costa small {
-  color: #8FB8B0;
+.cal-week__info strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #17324D;
+  margin-bottom: 0.1rem;
+}
+
+.cal-week__hotel {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #2F7F96;
+  margin-bottom: 0.3rem;
+}
+
+.cal-week__info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.5rem;
+}
+
+.cal-week__info li {
+  font-size: 0.72rem;
+  color: #243447;
+  opacity: 0.8;
 }
 
 /* --- BOOK FIRST --- */
@@ -890,6 +926,20 @@ a.chip {
   .glance__card { padding: 1rem 0.5rem; }
 
   .book-first__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Calendar week: horizontal on tablet+ */
+  .cal-week {
+    flex-direction: row;
+    gap: 0.4rem;
+  }
+  .cal-week__day {
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+  }
+  .cal-week__date { margin-bottom: 0.4rem; }
+  .cal-week__info ul { flex-direction: column; gap: 0.15rem; }
 
   .day-section__hero { aspect-ratio: 3 / 1; }
 
