@@ -276,7 +276,12 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
     }
 
     rerenderItinerary();
-    saveToGitHub(); // Persist to GitHub
+    // Persist to GitHub and report status
+    saveToGitHub().then(success => {
+      if (!success) {
+        console.error('Changes applied locally but NOT saved to GitHub');
+      }
+    });
   }
 
   // --- RE-RENDER ITINERARY ---
@@ -405,8 +410,19 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
 
         let parsed;
         try {
-          const cleaned = reply.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
-          parsed = JSON.parse(cleaned);
+          // Strip any thinking tags, markdown, or text before/after JSON
+          let cleaned = reply;
+          // Remove <think>...</think> blocks (DeepSeek R1)
+          cleaned = cleaned.replace(/<think>[\s\S]*?<\/think>/g, '');
+          // Remove markdown code fences
+          cleaned = cleaned.replace(/```json\n?/g, '').replace(/```\n?/g, '');
+          // Find the JSON object in the response
+          const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+          if (jsonMatch) {
+            parsed = JSON.parse(jsonMatch[0]);
+          } else {
+            parsed = { action: 'none', message: cleaned.trim() || reply };
+          }
         } catch (e) {
           parsed = { action: 'none', message: reply };
         }
@@ -438,13 +454,13 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
 
   function describeChanges(parsed) {
     switch (parsed.action) {
-      case 'update': return `Done! Updated ${parsed.changes.length} item${parsed.changes.length > 1 ? 's' : ''}. Saved to GitHub.`;
-      case 'add': return `Added: ${parsed.changes.map(c => c.event.title).join(', ')}. Saved to GitHub.`;
-      case 'remove': return `Removed ${parsed.changes.length} item${parsed.changes.length > 1 ? 's' : ''}. Saved to GitHub.`;
-      case 'swap_events': return `Swapped the events. Saved to GitHub.`;
-      case 'swap_days': return `Swapped the days. Saved to GitHub.`;
-      case 'move_event': return `Moved the event. Saved to GitHub.`;
-      default: return `Change applied and saved.`;
+      case 'update': return `✓ Updated ${parsed.changes.length} item${parsed.changes.length > 1 ? 's' : ''} on the page.`;
+      case 'add': return `✓ Added: ${parsed.changes.map(c => c.event.title).join(', ')}.`;
+      case 'remove': return `✓ Removed ${parsed.changes.length} item${parsed.changes.length > 1 ? 's' : ''}.`;
+      case 'swap_events': return `✓ Swapped the events.`;
+      case 'swap_days': return `✓ Swapped the days.`;
+      case 'move_event': return `✓ Moved the event.`;
+      default: return `✓ Change applied.`;
     }
   }
 
