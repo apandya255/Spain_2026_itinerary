@@ -5,13 +5,13 @@
 
 /* --- DESIGN TOKENS --- */
 :root {
-  --deep-navy: #1B2A4A;
-  --med-blue: #C8502D;
-  --sea-glass: #E8A838;
-  --warm-sand: #FDF0DC;
-  --terracotta: #A31621;
-  --ivory: #FFFBF5;
-  --charcoal: #2C2C2C;
+  --deep-navy: #1C1C1C;
+  --med-blue: #B8542A;
+  --sea-glass: #D4A853;
+  --warm-sand: #F5EDE3;
+  --terracotta: #9B2915;
+  --ivory: #FDFAF6;
+  --charcoal: #3A3A3A;
   --white: #FFFFFF;
 
   --color-heading: var(--deep-navy);
@@ -177,7 +177,7 @@ a.chip {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--deep-navy);
+  background-color: #1C1C1C;
   background-image: url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1200&q=75');
   background-size: cover;
   background-position: center;
@@ -188,7 +188,7 @@ a.chip {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(23,50,77,0.4) 0%, rgba(23,50,77,0.7) 100%);
+  background: linear-gradient(180deg, rgba(28,28,28,0.35) 0%, rgba(28,28,28,0.7) 100%);
 }
 
 .hero__content {
@@ -249,7 +249,7 @@ a.chip {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--deep-navy);
+  background: #1C1C1C;
   height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -328,8 +328,8 @@ a.chip {
 }
 
 .glance__card--costa {
-  background: rgba(143,184,176,0.08);
-  border-color: rgba(47,127,150,0.12);
+  background: rgba(212,168,83,0.08);
+  border-color: rgba(212,168,83,0.15);
 }
 
 .glance__day {
@@ -560,7 +560,7 @@ a.chip {
 }
 
 .day-section--costa {
-  background: rgba(143,184,176,0.04);
+  background: rgba(212,168,83,0.04);
 }
 
 .day-section__hero {
@@ -716,7 +716,7 @@ a.chip {
 /* --- ROUTE STRIP --- */
 .route-strip {
   padding: var(--space-2xl) 0;
-  background: var(--deep-navy);
+  background: #1C1C1C;
   color: var(--white);
 }
 
@@ -907,7 +907,7 @@ a.chip {
 
 /* --- FOOTER --- */
 .site-footer {
-  background: var(--deep-navy);
+  background: #1C1C1C;
   color: var(--white);
   text-align: center;
   padding: var(--space-xl) 1rem;
@@ -937,7 +937,7 @@ a.chip {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--deep-navy);
+  background: #1C1C1C;
   color: var(--white);
   display: flex;
   align-items: center;
