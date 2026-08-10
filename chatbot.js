@@ -8,7 +8,7 @@
 
   // --- CONFIG ---
   const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-  const MODEL = 'google/gemini-2.0-flash-001';
+  const MODEL = 'google/gemini-2.5-flash';
 
   const GITHUB_OWNER = 'apandya255';
   const GITHUB_REPO = 'Spain_2026_itinerary';
