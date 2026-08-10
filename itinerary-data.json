@@ -106,39 +106,39 @@
         },
         {
           "time": "14:30",
-          "title": "Casa Batlló",
-          "details": "Gaudí's fantastical renovation — bone-like balconies, dragon-scale roof, shimmering facade. One of Barcelona's most photographed buildings.",
-          "highlight": true,
-          "location": "https://maps.google.com/?q=Casa+Batllo+Barcelona"
-        },
-        {
-          "time": "16:00",
           "title": "Lunch in Eixample",
           "details": "Barcelona's grid-plan neighbourhood. Wide sidewalk terraces, modernista buildings, excellent restaurant density.",
           "location": "https://maps.google.com/?q=Eixample+Barcelona+restaurants"
         },
         {
-          "time": "17:30",
+          "time": "16:00",
           "title": "Return to W Barcelona",
           "details": "Afternoon reset at the hotel: swim, pool, beach, nap. The W makes the trip better by giving you this break.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "20:15",
-          "title": "Gràcia",
-          "details": "Village-like neighbourhood with bohemian squares, independent shops, and local café culture. Plaça de la Vila de Gràcia, Plaça del Sol, Plaça de la Virreina.",
-          "location": "https://maps.google.com/?q=Gracia+neighbourhood+Barcelona"
+          "time": "19:00",
+          "title": "Early Dinner/Tapas near Casa Batlló",
+          "details": "Grab an early dinner or some tapas in the Eixample area before your Magic Night experience. This allows for a more relaxed evening.",
+          "location": "https://maps.google.com/?q=Eixample+Barcelona+restaurants"
         },
         {
-          "time": "22:00",
-          "title": "Dinner in Gràcia",
-          "details": "Neighbourhood restaurants serving Catalan home cooking, natural wine bars, and relaxed terrace dining away from tourist crowds.",
-          "location": "https://maps.google.com/?q=Gracia+Barcelona+restaurants"
+          "time": "20:30",
+          "title": "Casa Batlló Magic Night",
+          "details": "Experience Gaudí's masterpiece illuminated at night, often with live music on the rooftop terrace and a drink. A truly magical and memorable evening. Book tickets in advance!",
+          "highlight": true,
+          "location": "https://maps.google.com/?q=Casa+Batllo+Barcelona"
         },
         {
-          "time": "24:00",
+          "time": "22:30",
+          "title": "Post-Magic Night Drink / Stroll",
+          "details": "Enjoy a final drink on Passeig de Gràcia or a leisurely stroll back to the W Barcelona, soaking in the evening atmosphere.",
+          "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
+        },
+        {
+          "time": "23:30",
           "title": "Return to W Barcelona",
-          "details": "Evening drink at Eclipse bar (26th floor) or the lobby lounge. No travel needed after.",
+          "details": "Taxi back to the hotel after a magical evening.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         }
       ]
