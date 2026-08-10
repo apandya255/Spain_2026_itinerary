@@ -1,96 +1,136 @@
 {
   "title": "Barcelona to the Costa Brava",
   "dates": "August 11–17, 2026",
+  "structure": "W Barcelona (3 nights) → Costa Brava (2 nights) → Le Méridien Barcelona (1 night + departure)",
   "days": [
     {
-      "id": 1, "date": "2026-08-11", "label": "Tue Aug 11", "base": "Barcelona",
-      "theme": "Arrival + Old Barcelona",
+      "id": 1,
+      "date": "2026-08-11",
+      "label": "Tue Aug 11",
+      "base": "W Barcelona",
+      "theme": "Arrival, W Barcelona, Gothic Quarter & El Born",
       "events": [
-        { "time": "09:00", "title": "Land at BCN", "details": "Allow time for immigration, luggage collection, and transfer." },
-        { "time": "~10:30", "title": "Transfer + Bag Drop", "details": "Taxi or private transfer for a family arriving with luggage." },
-        { "time": "12:30", "title": "Easy Catalan Lunch", "details": "Pan con tomate, jamón, croquetas, seafood, patatas bravas." },
-        { "time": "14:00", "title": "Gothic Quarter → El Born", "details": "Plaça Catalunya → La Rambla → Plaça Reial → Cathedral → Santa Maria del Mar." },
-        { "time": "17:00", "title": "Hotel Reset", "details": "Nap, shower, hydrate." },
-        { "time": "20:00", "title": "Dinner", "details": "Good Spanish food, save the biggest meal for later." },
-        { "time": "22:00", "title": "Optional Night Walk", "details": "Short walk through the illuminated center, then early bed." }
+        { "time": "09:00", "title": "Arrive at BCN Airport", "details": "Allow 60–90 minutes for immigration, baggage claim, and leaving the terminal." },
+        { "time": "~10:30", "title": "Taxi to W Barcelona", "details": "Go directly to W Barcelona, Plaça Rosa dels Vents, 1. Waterfront at the southern end of Barceloneta." },
+        { "time": "~11:00", "title": "Arrive at W Barcelona", "details": "Drop luggage if room is not ready. Do not book any timed attraction for the first morning." },
+        { "time": "11:30", "title": "W Barcelona + Beachfront Walk", "details": "Walk along Sant Sebastià Beach → Barceloneta promenade. Light snack or drink. Low-stress first look at Barcelona." },
+        { "time": "13:00", "title": "Lunch in Barceloneta", "details": "First proper meal: seafood, croquetas, pan con tomate, grilled fish, tapas, rice dishes. Save the bigger paella for another night." },
+        { "time": "14:30", "title": "W Barcelona Reset", "details": "Room check-in, shower, nap, pool, beach, relax. The W is worth actually using." },
+        { "time": "17:00", "title": "Gothic Quarter", "details": "Taxi to Plaça Reial. Walk: Plaça Reial → Carrer del Call → Plaça Sant Jaume → Cathedral → Pont del Bisbe → Plaça del Rei → Temple of Augustus." },
+        { "time": "18:30", "title": "El Born", "details": "Santa Maria del Mar → Passeig del Born → Carrer de Montcada → surrounding side streets." },
+        { "time": "20:00", "title": "Dinner in El Born", "details": "Tapas-focused dinner. Better for the first evening meal than returning to the W." },
+        { "time": "22:00", "title": "Port Vell Evening Walk", "details": "Walk toward the harbor, then taxi back to the W." },
+        { "time": "~22:30", "title": "W Barcelona", "details": "One drink at the hotel or enjoy the waterfront. Otherwise, sleep." }
       ]
     },
     {
-      "id": 2, "date": "2026-08-12", "label": "Wed Aug 12", "base": "Barcelona",
-      "theme": "Gaudí Essentials",
+      "id": 2,
+      "date": "2026-08-12",
+      "label": "Wed Aug 12",
+      "base": "W Barcelona",
+      "theme": "Sagrada Família, Passeig de Gràcia, Casa Batlló & Gràcia",
       "events": [
-        { "time": "08:00", "title": "Breakfast", "details": "Start early for morning attraction." },
-        { "time": "09:30", "title": "Sagrada Família", "details": "Allow 90–120 minutes. Tower optional.", "highlight": true },
-        { "time": "12:15", "title": "Lunch in Eixample", "details": "Explore a few blocks from the basilica." },
-        { "time": "14:00", "title": "Passeig de Gràcia", "details": "Walk past Casa Milà exterior toward Casa Batlló." },
-        { "time": "14:30", "title": "Casa Batlló", "details": "Choose this over doing both interiors.", "highlight": true },
-        { "time": "16:00", "title": "Hotel / Rest", "details": "Intentional downtime." },
-        { "time": "18:30", "title": "Gràcia Neighborhood", "details": "Plaça de la Vila de Gràcia, Plaça del Sol." },
-        { "time": "20:30", "title": "Dinner in Gràcia", "details": "Neighborhood dinner." }
+        { "time": "07:30", "title": "Breakfast at W Barcelona", "details": "Fuel up for the main architecture day." },
+        { "time": "08:30", "title": "Taxi to Sagrada Família", "details": "Use taxis from the W rather than walking/metro for major sightseeing moves." },
+        { "time": "09:00", "title": "Sagrada Família", "details": "Book early entry. ~2 hours: main basilica, Nativity façade, Passion façade, museum, tower if desired. One of the signature experiences of the trip.", "highlight": true },
+        { "time": "11:15", "title": "Avinguda de Gaudí", "details": "Walk toward Hospital de Sant Pau. See the exterior, stop for coffee. No need for another large interior tour." },
+        { "time": "12:00", "title": "Passeig de Gràcia", "details": "Taxi to Eixample. Walk past Casa Milà / La Pedrera → Passeig de Gràcia → Casa Batlló." },
+        { "time": "13:00", "title": "Casa Batlló", "details": "Tour Casa Batlló. Choose this over doing both Casa Batlló and Casa Milà interiors.", "highlight": true },
+        { "time": "14:30", "title": "Lunch in Eixample", "details": "Proper sit-down lunch in the neighborhood." },
+        { "time": "16:00", "title": "Return to W Barcelona", "details": "Swim, pool, beach, nap, shower, relax. The W improves the trip by giving you this afternoon reset." },
+        { "time": "18:45", "title": "Gràcia", "details": "Taxi to Gràcia. Explore Plaça de la Vila de Gràcia → Plaça del Sol → Plaça de la Virreina. More residential Barcelona after a monument-heavy morning." },
+        { "time": "20:30", "title": "Dinner in Gràcia", "details": "Neighborhood dinner in Gràcia." },
+        { "time": "22:30", "title": "Return to W Barcelona", "details": "Evening drink at the W — no travel needed afterward." }
       ]
     },
     {
-      "id": 3, "date": "2026-08-13", "label": "Thu Aug 13", "base": "Barcelona",
-      "theme": "Park Güell + Coast + Montjuïc",
+      "id": 3,
+      "date": "2026-08-13",
+      "label": "Thu Aug 13",
+      "base": "W Barcelona",
+      "theme": "Park Güell, Montjuïc, W Beach Afternoon & Barceloneta Evening",
       "events": [
-        { "time": "08:00", "title": "Breakfast", "details": "Keep the morning efficient." },
-        { "time": "09:30", "title": "Park Güell", "details": "90–120 min. Monumental Zone, mosaic bench, views.", "highlight": true },
-        { "time": "12:30", "title": "Seafood / Rice Lunch", "details": "Head toward Barceloneta." },
-        { "time": "14:00", "title": "Port Vell + Barceloneta", "details": "Enjoy waterfront without overdoing beach time." },
-        { "time": "16:30", "title": "Montjuïc", "details": "Viewpoints, Olympic area, gardens." },
-        { "time": "19:00", "title": "Hotel Reset", "details": "Return before dinner." },
-        { "time": "21:00", "title": "Higher-End Dinner", "details": "One of the nicer Barcelona meals." }
+        { "time": "08:00", "title": "Breakfast at W", "details": "Last morning at the W before Costa Brava tomorrow." },
+        { "time": "08:45", "title": "Taxi to Park Güell", "details": "Head up to the park for early entry." },
+        { "time": "09:30", "title": "Park Güell", "details": "Monumental Zone, Hypostyle Room, serpentine mosaic bench, Gaudí structures, city viewpoints. ~90 minutes.", "highlight": true },
+        { "time": "11:30", "title": "Gràcia Coffee", "details": "Come down from Park Güell. Coffee or snack in the neighborhood." },
+        { "time": "12:30", "title": "Lunch", "details": "Have lunch before crossing toward Montjuïc." },
+        { "time": "14:15", "title": "Montjuïc", "details": "Taxi to Montjuïc. MNAC viewpoint, Olympic area, gardens, miradors, skyline views. Do not try to walk the entire hill." },
+        { "time": "16:15", "title": "Return to W Barcelona", "details": "Intentionally earlier return. This is the transition from city sightseeing toward the coastal vacation." },
+        { "time": "16:30", "title": "W Barcelona Beach / Pool Afternoon", "details": "Proper chunk of afternoon enjoying the hotel: pool, beach, spa, drinks, waterfront walk. Major advantage of the W.", "highlight": true },
+        { "time": "19:15", "title": "Barceloneta Walk", "details": "Walk from the W along beachfront: Sant Sebastià Beach → Barceloneta Beach → Barceloneta neighborhood." },
+        { "time": "20:30", "title": "Seafood Dinner", "details": "One of the main Barcelona dinners: grilled Mediterranean fish, gambas, croquetas, seafood rice, paella, fideuà. No crossing the city afterward.", "highlight": true },
+        { "time": "22:30", "title": "Walk Back to W", "details": "Beachfront promenade back to the hotel. Last night at the W." }
       ]
     },
     {
-      "id": 4, "date": "2026-08-14", "label": "Fri Aug 14", "base": "Barcelona",
-      "theme": "Flexible Luxury Barcelona",
+      "id": 4,
+      "date": "2026-08-14",
+      "label": "Fri Aug 14",
+      "base": "Costa Brava",
+      "theme": "W Barcelona → Begur → Aiguablava",
       "events": [
-        { "time": "09:00", "title": "Slow Breakfast", "details": "Intentionally less-scheduled day." },
-        { "time": "10:00", "title": "La Boqueria", "details": "Morning visit. Snack and browse." },
-        { "time": "11:00", "title": "Choose One Cultural Block", "details": "Option A: Picasso Museum. Option B: Palau de la Música. Option C: Shopping.", "choice": true },
-        { "time": "13:30", "title": "Lunch", "details": "Relaxed central lunch." },
-        { "time": "15:00", "title": "Unstructured Buffer", "details": "Shopping, café, pool, spa, nap, or revisit a neighborhood.", "choice": true },
-        { "time": "19:30", "title": "Sunset Drinks", "details": "Rooftop bar or a quiet plaça." },
-        { "time": "21:00", "title": "Best Barcelona Dinner", "details": "The special city meal of the trip.", "highlight": true }
+        { "time": "07:30", "title": "Breakfast", "details": "Final breakfast at the W." },
+        { "time": "08:15", "title": "Checkout from W Barcelona", "details": "Collect luggage and prepare to depart." },
+        { "time": "08:30", "title": "Pick Up Rental Car", "details": "Arrange pickup to avoid driving through central Barcelona. Load luggage and depart." },
+        { "time": "09:00", "title": "Drive to Begur", "details": "Head north toward Costa Brava. ~1.5–2 hours via AP-7." },
+        { "time": "~11:00", "title": "Begur Arrival", "details": "Drop luggage at the Costa Brava hotel. Base yourself around Begur." },
+        { "time": "11:30", "title": "Aiguablava", "details": "Spend the core of the day at Cala Aiguablava: swimming, snorkeling, kayaking, paddleboarding, beach. Do not rush this.", "highlight": true },
+        { "time": "~13:30", "title": "Coastal Lunch", "details": "Long Mediterranean lunch overlooking or near the water." },
+        { "time": "15:30", "title": "Hotel / Siesta", "details": "Check in properly. Shower and relax." },
+        { "time": "18:00", "title": "Begur Old Town", "details": "Explore the old town. Walk toward Begur Castle as the temperature falls. Views across the Empordà and coastline." },
+        { "time": "20:30", "title": "Dinner in Begur", "details": "Evening meal in the village." }
       ]
     },
     {
-      "id": 5, "date": "2026-08-15", "label": "Sat Aug 15", "base": "Costa Brava",
-      "theme": "Begur + Aiguablava + Medieval Villages",
+      "id": 5,
+      "date": "2026-08-15",
+      "label": "Sat Aug 15",
+      "base": "Costa Brava",
+      "theme": "Calella de Palafrugell, Camí de Ronda, Llafranc, Pals & Peratallada",
       "events": [
-        { "time": "08:00", "title": "Breakfast + Pack", "details": "Check out of Barcelona hotel." },
-        { "time": "~09:00", "title": "Rental Car + Depart", "details": "~1.5–2 hour drive to Begur." },
-        { "time": "~11:00", "title": "Begur Arrival", "details": "Drop bags, quick old-town look." },
-        { "time": "12:00", "title": "Aiguablava", "details": "Beach, swim, snorkel, kayak. Core trip highlight — 3 hours.", "highlight": true },
-        { "time": "15:30", "title": "Hotel Check-in + Shower", "details": "Reset after beach." },
-        { "time": "17:00", "title": "Pals", "details": "Medieval old town, stone lanes, viewpoints." },
-        { "time": "18:30", "title": "Peratallada", "details": "Use sunset light for this medieval village." },
-        { "time": "20:00", "title": "Dinner in Peratallada", "details": "Dine in the village, drive back to Begur." }
+        { "time": "08:00", "title": "Breakfast", "details": "Start the day at the hotel." },
+        { "time": "09:00", "title": "Calella de Palafrugell", "details": "Port Bo, whitewashed waterfront buildings, small beaches, fishing-village streets." },
+        { "time": "10:00", "title": "Camí de Ronda", "details": "Walk the coastal path Calella → Llafranc. Rocky coastline, pine trees, turquoise water, coves. One of the highest-priority experiences of the entire trip.", "highlight": true },
+        { "time": "11:00", "title": "Llafranc", "details": "Explore the marina and waterfront. Optional: continue toward Sant Sebastià lighthouse for views." },
+        { "time": "12:30", "title": "Long Seafood Lunch", "details": "Seafood in Llafranc or Calella: local fish, anchovies, prawns, seafood rice, fideuà." },
+        { "time": "14:30", "title": "Swim", "details": "Return to the water. Relax rather than immediately getting in the car." },
+        { "time": "16:15", "title": "Drive Inland", "details": "Head toward the medieval villages." },
+        { "time": "16:45", "title": "Pals", "details": "Explore the medieval center. Stone streets and viewpoints." },
+        { "time": "18:15", "title": "Peratallada", "details": "Walk through stone streets and plazas around golden hour.", "highlight": true },
+        { "time": "20:00", "title": "Dinner", "details": "Eat in Peratallada or return toward Begur." }
       ]
     },
     {
-      "id": 6, "date": "2026-08-16", "label": "Sun Aug 16", "base": "Costa Brava → Barcelona",
-      "theme": "Calella + Llafranc + Camí de Ronda + Sa Tuna",
+      "id": 6,
+      "date": "2026-08-16",
+      "label": "Sun Aug 16",
+      "base": "Le Méridien Barcelona",
+      "theme": "Costa Brava → Le Méridien, Relaxed Final Barcelona Day",
       "events": [
-        { "time": "08:00", "title": "Breakfast", "details": "Start early — packed day." },
-        { "time": "09:00", "title": "Calella de Palafrugell", "details": "Whitewashed waterfront and small beaches." },
-        { "time": "~10:00", "title": "Camí de Ronda", "details": "Scenic coastal walk from Calella toward Llafranc. Top-priority experience.", "highlight": true },
-        { "time": "11:00", "title": "Llafranc", "details": "Coffee, marina, swim. Lighthouse optional." },
-        { "time": "13:00", "title": "Long Seafood Lunch", "details": "Fish, prawns, anchovies, fideuà." },
-        { "time": "15:45", "title": "Sa Tuna", "details": "Final swim and short coastal walk." },
-        { "time": "18:00", "title": "Drive to Barcelona", "details": "Return Sunday evening. Drop rental car." },
-        { "time": "~20:00", "title": "Le Méridien Barcelona", "details": "Check in, simple dinner, pack." }
+        { "time": "08:00", "title": "Breakfast in Costa Brava", "details": "Final morning on the coast." },
+        { "time": "09:00", "title": "Leave for Barcelona", "details": "Drive south back to the city." },
+        { "time": "~11:00", "title": "Return Rental Car", "details": "Drop the car, then head to Le Méridien Barcelona. Central location: walk directly into Gothic Quarter, La Rambla, Plaça Catalunya, Passeig de Gràcia." },
+        { "time": "11:30", "title": "Le Méridien Check-in", "details": "Drop bags. Different character from the W — central city positioning." },
+        { "time": "12:00", "title": "Central Barcelona Walk", "details": "Le Méridien → Plaça Catalunya → La Rambla → Gothic Quarter → Plaça Reial. Intentionally easy." },
+        { "time": "13:30", "title": "Lunch", "details": "Central Barcelona lunch." },
+        { "time": "15:00", "title": "Le Méridien Break", "details": "Relax. Organize bags. Use the hotel." },
+        { "time": "17:00", "title": "Flexible Final Barcelona Block", "details": "Choose what you enjoyed most: A) Shopping on Passeig de Gràcia, B) El Born boutiques/cafés, C) Gothic Quarter revisit, D) Palau de la Música, E) Port Vell sunset. Do NOT choose another beach afternoon.", "choice": true },
+        { "time": "20:30", "title": "Farewell Dinner", "details": "Make this the best or most celebratory dinner of the trip.", "highlight": true },
+        { "time": "22:30", "title": "Final Barcelona Walk", "details": "Walk back through the center to Le Méridien." }
       ]
     },
     {
-      "id": 7, "date": "2026-08-17", "label": "Mon Aug 17", "base": "Barcelona",
-      "theme": "Le Méridien + Departure",
+      "id": 7,
+      "date": "2026-08-17",
+      "label": "Mon Aug 17",
+      "base": "Le Méridien Barcelona",
+      "theme": "Le Méridien + Final Half Day",
       "events": [
-        { "time": "07:30", "title": "Breakfast", "details": "Slow final morning." },
-        { "time": "09:00", "title": "Final City Walk", "details": "La Rambla / Gothic Quarter OR Passeig de Gràcia.", "choice": true },
-        { "time": "10:30", "title": "Back to Le Méridien", "details": "Final packing and checkout." },
-        { "time": "—", "title": "Airport Transfer", "details": "Large buffer for international flight." }
+        { "time": "08:00", "title": "Breakfast", "details": "No rush. Final morning." },
+        { "time": "09:00", "title": "Final Walk", "details": "Option A: Le Méridien → Gothic Quarter → Plaça Reial → La Rambla → back. Option B: Plaça Catalunya → Rambla de Catalunya → Passeig de Gràcia → back. Coffee, pastries, souvenirs, photos.", "choice": true },
+        { "time": "10:30", "title": "Back to Le Méridien", "details": "Finish packing. Collect luggage." },
+        { "time": "~12:00", "title": "Checkout / Airport Transfer", "details": "Leave based on flight time. Target arrival at BCN ~3 hours before international departure." }
       ]
     }
   ]
