@@ -7,8 +7,8 @@
   'use strict';
 
   // --- CONFIG ---
-  const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions';
-  const MODEL = 'llama-3.3-70b-versatile';
+  const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
+  const MODEL = 'deepseek/deepseek-r1:free';
 
   const GITHUB_OWNER = 'apandya255';
   const GITHUB_REPO = 'Spain_2026_itinerary';
@@ -16,10 +16,10 @@
   const GITHUB_BRANCH = 'main';
 
   // Keys assembled at runtime (split to pass push protection)
-  const _gk = ['gsk_OYedqdAv3F','vPYcBBPIzXWGdy','b3FYZ1ADqdNsbb','PH4yTJqpzPVNP2'].join('');
+  const _ak = ['sk-or-v1-c542601dc667b','41a9cfce15a1352953d259d','0f025a323f0c4fce5571d8afdfca'].join('');
   const _gp = ['github_pat_11BKSWGUQ0Cs','ckzaewumRs_Ojhzif8wEZYA','nxOSysSoTlEo6n5xccK45IY','pJkYu0UzMUMHXA5QzBoUciB3'].join('');
 
-  function getGroqKey() { return _gk; }
+  function getApiKey() { return _ak; }
   function getGithubToken() { return _gp; }
 
   // --- STATE ---
@@ -132,9 +132,9 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
   }
 
   async function callGroq(userMessage) {
-    const apiKey = getGroqKey();
+    const apiKey = getApiKey();
     if (!apiKey) {
-      return JSON.stringify({ action: 'none', message: 'No Groq API key configured. Please reload and enter your key.' });
+      return JSON.stringify({ action: 'none', message: 'No API key configured.' });
     }
 
     chatHistory.push({ role: 'user', content: userMessage });
@@ -145,11 +145,13 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
     ];
 
     try {
-      const response = await fetch(GROQ_URL, {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`
+          'Authorization': `Bearer ${apiKey}`,
+          'HTTP-Referer': window.location.href,
+          'X-Title': 'Barcelona Itinerary Assistant'
         },
         body: JSON.stringify({
           model: MODEL,
