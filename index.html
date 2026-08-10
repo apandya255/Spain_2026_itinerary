@@ -23,7 +23,6 @@
       <div class="hero__cta-group">
         <a href="#day-1" class="btn btn--primary">Start the itinerary</a>
         <a href="#book-first" class="btn btn--secondary">What to book now</a>
-        <button class="btn btn--secondary" id="hero-cal-btn">View calendar</button>
       </div>
     </div>
   </header>
@@ -60,111 +59,13 @@
         <span class="day-nav__label">Mon</span>
       </a>
     </div>
-    <button class="day-nav__cal-btn" id="cal-open" aria-label="Open calendar view">
+    <button class="day-nav__cal-btn" id="cal-open" aria-label="Open calendar view" hidden>
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M6 1.5V4.5M12 1.5V4.5M2.25 7.5H15.75M3.75 3H14.25C15.075 3 15.75 3.675 15.75 4.5V15C15.75 15.825 15.075 16.5 14.25 16.5H3.75C2.925 16.5 2.25 15.825 2.25 15V4.5C2.25 3.675 2.925 3 3.75 3Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
   </nav>
 
-  <!-- CALENDAR OVERLAY -->
-  <div class="cal-overlay" id="cal-overlay" hidden>
-    <div class="cal-overlay__panel">
-      <div class="cal-overlay__header">
-        <h3>Trip Week — August 11–17, 2026</h3>
-        <button class="cal-overlay__close" id="cal-close" aria-label="Close calendar">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 4L14 14M14 4L4 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </button>
-      </div>
-      <div class="cal-week">
-        <a href="#day-1" class="cal-week__day" data-calday="1">
-          <div class="cal-week__date"><span class="cal-week__dow">Tue</span><span class="cal-week__num">11</span></div>
-          <div class="cal-week__info">
-            <strong>Arrival + Old City</strong>
-            <span class="cal-week__hotel">W Barcelona</span>
-            <ul>
-              <li>✈ Arrive BCN 9:00</li>
-              <li>Gothic Quarter</li>
-              <li>El Born dinner</li>
-            </ul>
-          </div>
-        </a>
-        <a href="#day-2" class="cal-week__day" data-calday="2">
-          <div class="cal-week__date"><span class="cal-week__dow">Wed</span><span class="cal-week__num">12</span></div>
-          <div class="cal-week__info">
-            <strong>Gaudí + Architecture</strong>
-            <span class="cal-week__hotel">W Barcelona</span>
-            <ul>
-              <li>⭐ Sagrada Família 9:00</li>
-              <li>⭐ Casa Batlló 13:00</li>
-              <li>Gràcia evening</li>
-            </ul>
-          </div>
-        </a>
-        <a href="#day-3" class="cal-week__day" data-calday="3">
-          <div class="cal-week__date"><span class="cal-week__dow">Thu</span><span class="cal-week__num">13</span></div>
-          <div class="cal-week__info">
-            <strong>Park Güell + Beach</strong>
-            <span class="cal-week__hotel">W Barcelona</span>
-            <ul>
-              <li>⭐ Park Güell 9:30</li>
-              <li>Montjuïc 14:15</li>
-              <li>W pool afternoon</li>
-              <li>Seafood dinner</li>
-            </ul>
-          </div>
-        </a>
-        <a href="#day-4" class="cal-week__day cal-week__day--costa" data-calday="4">
-          <div class="cal-week__date"><span class="cal-week__dow">Fri</span><span class="cal-week__num">14</span></div>
-          <div class="cal-week__info">
-            <strong>Begur + Aiguablava</strong>
-            <span class="cal-week__hotel">Begur</span>
-            <ul>
-              <li>🚗 Drive to Costa Brava</li>
-              <li>⭐ Aiguablava 11:30</li>
-              <li>Begur Castle 18:00</li>
-              <li>Village dinner</li>
-            </ul>
-          </div>
-        </a>
-        <a href="#day-5" class="cal-week__day cal-week__day--costa" data-calday="5">
-          <div class="cal-week__date"><span class="cal-week__dow">Sat</span><span class="cal-week__num">15</span></div>
-          <div class="cal-week__info">
-            <strong>Camí de Ronda + Villages</strong>
-            <span class="cal-week__hotel">Begur</span>
-            <ul>
-              <li>Calella de Palafrugell</li>
-              <li>⭐ Camí de Ronda 10:00</li>
-              <li>Llafranc + swim</li>
-              <li>Pals + Peratallada</li>
-            </ul>
-          </div>
-        </a>
-        <a href="#day-6" class="cal-week__day" data-calday="6">
-          <div class="cal-week__date"><span class="cal-week__dow">Sun</span><span class="cal-week__num">16</span></div>
-          <div class="cal-week__info">
-            <strong>Return + Final BCN</strong>
-            <span class="cal-week__hotel">Le Méridien</span>
-            <ul>
-              <li>🚗 Drive back 9:00</li>
-              <li>Central BCN walk</li>
-              <li>Flexible afternoon</li>
-              <li>⭐ Farewell dinner</li>
-            </ul>
-          </div>
-        </a>
-        <a href="#day-7" class="cal-week__day" data-calday="7">
-          <div class="cal-week__date"><span class="cal-week__dow">Mon</span><span class="cal-week__num">17</span></div>
-          <div class="cal-week__info">
-            <strong>Departure</strong>
-            <span class="cal-week__hotel">Le Méridien</span>
-            <ul>
-              <li>Final morning walk</li>
-              <li>✈ Airport ~12:00</li>
-            </ul>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
+  <!-- CALENDAR OVERLAY (hidden) -->
+  <div class="cal-overlay" id="cal-overlay" hidden></div>
 
   <main id="main-content">
     <!-- TRIP AT A GLANCE -->
