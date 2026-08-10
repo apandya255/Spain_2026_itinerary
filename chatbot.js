@@ -415,12 +415,14 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
     toggle.addEventListener('click', () => {
       panel.hidden = false;
       toggle.hidden = true;
+      document.body.style.overflow = 'hidden';
       input.focus();
     });
 
     closeBtn.addEventListener('click', () => {
       panel.hidden = true;
       toggle.hidden = false;
+      document.body.style.overflow = '';
     });
 
     form.addEventListener('submit', async (e) => {
@@ -497,20 +499,17 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
           const vvOffset = window.visualViewport.offsetTop;
           panel.style.height = `${vvh}px`;
           panel.style.top = `${vvOffset}px`;
-          // Scroll messages to bottom when keyboard opens
-          messages.scrollTop = messages.scrollHeight;
         }
       };
       window.visualViewport.addEventListener('resize', resizePanel);
       window.visualViewport.addEventListener('scroll', resizePanel);
     }
 
-    // Scroll input into view when focused (fallback for older browsers)
+    // Keep input visible when focused — gentle scroll after keyboard settles
     input.addEventListener('focus', () => {
       setTimeout(() => {
-        input.scrollIntoView({ block: 'nearest' });
         messages.scrollTop = messages.scrollHeight;
-      }, 300);
+      }, 400);
     });
   }
 
