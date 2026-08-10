@@ -257,8 +257,9 @@ ul, ol {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 7vw, 4.5rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: var(--space-md);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero__subtitle {
@@ -268,6 +269,7 @@ ul, ol {
   font-style: italic;
   opacity: 0.92;
   margin-bottom: var(--space-sm);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 .hero__dates {
@@ -504,10 +506,12 @@ ul, ol {
 
 .day-section__title {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
   font-weight: 700;
   color: var(--color-heading);
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+  text-wrap: balance;
 }
 
 .day-section__meta {
@@ -529,13 +533,13 @@ ul, ol {
 /* --- TIMELINE --- */
 .timeline {
   position: relative;
-  padding-left: 1rem;
+  padding-left: 0;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 4.2rem;
+  left: 4.5rem;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -548,7 +552,7 @@ ul, ol {
   grid-template-columns: 4rem 1fr;
   gap: var(--space-md);
   padding: var(--space-md) 0;
-  padding-left: 1.5rem;
+  padding-left: 2rem;
 }
 
 .timeline-item + .timeline-item {
@@ -558,8 +562,8 @@ ul, ol {
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: 3.7rem;
-  top: 1.4rem;
+  left: 4.05rem;
+  top: 1.35rem;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -572,7 +576,8 @@ ul, ol {
   background: var(--terracotta);
   width: 12px;
   height: 12px;
-  left: 3.6rem;
+  left: 3.95rem;
+  top: 1.3rem;
 }
 
 .timeline-item--choice::before {
@@ -857,9 +862,23 @@ ul, ol {
 .tip-card {
   opacity: 0;
   transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Safety: make visible after 2s even if observer hasn't fired */
+@supports (animation-timeline: auto) {
+  .day-section__header,
+  .timeline-item,
+  .glance__card,
+  .reservation-card,
+  .tip-card {
+    animation: fadeSlideUp 0.01ms 2s forwards;
+  }
 }
 
 .is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
   animation: fadeSlideUp 0.5s ease forwards;
 }
 
@@ -890,13 +909,22 @@ ul, ol {
     border-radius: 0 0 var(--radius) var(--radius);
   }
 
-  .timeline {
-    padding-left: 2rem;
+  .timeline::before {
+    left: 5.5rem;
   }
 
   .timeline-item {
     grid-template-columns: 5rem 1fr;
     gap: var(--space-lg);
+    padding-left: 2.5rem;
+  }
+
+  .timeline-item::before {
+    left: 5.05rem;
+  }
+
+  .timeline-item--highlight::before {
+    left: 4.95rem;
   }
 
   .glance__grid {
@@ -922,30 +950,25 @@ ul, ol {
     padding: 0.5rem 1.5rem;
   }
 
-  .day-section {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
   .day-section__hero {
     aspect-ratio: 3 / 1;
   }
 
   .timeline::before {
-    left: 5.2rem;
+    left: 6rem;
   }
 
   .timeline-item {
     grid-template-columns: 5.5rem 1fr;
-    padding-left: 2rem;
+    padding-left: 3rem;
   }
 
   .timeline-item::before {
-    left: 4.7rem;
+    left: 5.55rem;
   }
 
   .timeline-item--highlight::before {
-    left: 4.6rem;
+    left: 5.45rem;
   }
 
   .book-first__grid {
@@ -985,24 +1008,28 @@ ul, ol {
     aspect-ratio: 16 / 9;
   }
 
+  .day-section__title {
+    font-size: 1.3rem;
+  }
+
   .timeline::before {
     left: 3.5rem;
   }
 
   .timeline-item {
-    grid-template-columns: 3.2rem 1fr;
+    grid-template-columns: 3rem 1fr;
     gap: var(--space-sm);
-    padding-left: 1rem;
+    padding-left: 1.2rem;
   }
 
   .timeline-item::before {
-    left: 3rem;
+    left: 3.05rem;
     width: 8px;
     height: 8px;
   }
 
   .timeline-item--highlight::before {
-    left: 2.9rem;
+    left: 2.95rem;
     width: 10px;
     height: 10px;
   }

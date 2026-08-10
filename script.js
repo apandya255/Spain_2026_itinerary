@@ -101,6 +101,15 @@
     );
 
     revealElements.forEach((el) => revealObserver.observe(el));
+
+    // Safety: reveal everything after 3s in case observer misses items
+    setTimeout(() => {
+      revealElements.forEach((el) => {
+        if (!el.classList.contains('is-revealed')) {
+          el.classList.add('is-revealed');
+        }
+      });
+    }, 3000);
   } else {
     // If reduced motion preferred, make everything visible immediately
     revealElements.forEach((el) => {
