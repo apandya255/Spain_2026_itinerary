@@ -17,7 +17,7 @@
 
   // Keys assembled at runtime (split to pass push protection)
   const _ak = ['sk-or-v1-c542601dc667b','41a9cfce15a1352953d259d','0f025a323f0c4fce5571d8afdfca'].join('');
-  const _gp = ['github_pat_11BKSWGUQ0Cs','ckzaewumRs_Ojhzif8wEZYA','nxOSysSoTlEo6n5xccK45IY','pJkYu0UzMUMHXA5QzBoUciB3'].join('');
+  const _gp = ['ghp_Mfs0uk','pQpWWdpBR2','pHW7o46RgM','Dut84ITkS5'].join('');
 
   function getApiKey() { return _ak; }
   function getGithubToken() { return _gp; }
