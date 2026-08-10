@@ -15,18 +15,18 @@
   const GITHUB_FILE = 'itinerary-data.json';
   const GITHUB_BRANCH = 'main';
 
-  // Keys stored in localStorage (prompted on first use)
+  // Keys stored in localStorage (prompted only when needed)
   function getKey(name, label) {
     let key = localStorage.getItem(`itinerary_${name}`);
     if (!key) {
-      key = prompt(`Enter your ${label}:`);
+      key = prompt(`Enter your ${label}:\n\n(This is stored in your browser only — you won't be asked again on this device.)`);
       if (key) localStorage.setItem(`itinerary_${name}`, key.trim());
     }
     return key ? key.trim() : null;
   }
 
   function getGroqKey() { return getKey('groq_key', 'Groq API Key'); }
-  function getGithubToken() { return getKey('github_token', 'GitHub Personal Access Token'); }
+  function getGithubToken() { return getKey('github_token', 'GitHub Personal Access Token (repo scope)'); }
 
   // --- STATE ---
   let itinerary = null;
@@ -35,9 +35,10 @@
 
   // --- GITHUB: LOAD DATA ---
   async function loadFromGitHub() {
-    const token = getGithubToken();
+    // On load, try GitHub if token exists; otherwise use local file silently
+    const token = localStorage.getItem('itinerary_github_token');
     if (!token) {
-      console.warn('No GitHub token — loading local fallback');
+      console.log('No GitHub token yet — loading local data (token will be requested on first chat)');
       await loadLocalFallback();
       return;
     }
