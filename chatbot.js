@@ -41,7 +41,13 @@
 
       const data = await res.json();
       fileSha = data.sha;
-      const content = atob(data.content.replace(/\n/g, ''));
+      // Properly decode UTF-8 from base64
+      const binary = atob(data.content.replace(/\n/g, ''));
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) {
+        bytes[i] = binary.charCodeAt(i);
+      }
+      const content = new TextDecoder('utf-8').decode(bytes);
       itinerary = JSON.parse(content);
       rerenderItinerary();
       console.log('Itinerary loaded from GitHub');
