@@ -404,9 +404,12 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
     `;
     document.body.appendChild(widget);
 
+    // Move panel to body root so nothing interferes with fixed positioning
+    const panel = document.getElementById('chat-panel');
+    document.body.appendChild(panel);
+
     // Bind events
     const toggle = document.getElementById('chat-toggle');
-    const panel = document.getElementById('chat-panel');
     const closeBtn = document.getElementById('chat-close');
     const form = document.getElementById('chat-form');
     const input = document.getElementById('chat-input');
