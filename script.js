@@ -146,4 +146,41 @@
   // --- INITIAL STATE ---
   handleBackToTop();
 
+  // --- CALENDAR OVERLAY ---
+  const calOpen = document.getElementById('cal-open');
+  const calOverlay = document.getElementById('cal-overlay');
+  const calClose = document.getElementById('cal-close');
+
+  if (calOpen && calOverlay && calClose) {
+    calOpen.addEventListener('click', () => {
+      calOverlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+    });
+
+    calClose.addEventListener('click', () => {
+      calOverlay.hidden = true;
+      document.body.style.overflow = '';
+    });
+
+    // Close on backdrop click
+    calOverlay.addEventListener('click', (e) => {
+      if (e.target === calOverlay) {
+        calOverlay.hidden = true;
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Day cell clicks — scroll to that day and close calendar
+    calOverlay.querySelectorAll('[data-calday]').forEach(cell => {
+      cell.addEventListener('click', (e) => {
+        e.preventDefault();
+        calOverlay.hidden = true;
+        document.body.style.overflow = '';
+        const dayId = cell.getAttribute('href');
+        const target = document.querySelector(dayId);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  }
+
 })();

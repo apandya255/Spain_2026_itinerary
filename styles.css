@@ -330,90 +330,133 @@ a.chip {
   opacity: 0.65;
 }
 
-/* --- CALENDAR --- */
-.calendar {
-  padding: var(--space-xl) 0 var(--space-2xl);
-}
-
-.calendar__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.5rem;
-}
-
-.calendar__day {
-  display: grid;
-  grid-template-columns: 3.5rem 1fr auto;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.7rem 0.75rem;
-  background: var(--color-card);
-  border: 1px solid rgba(23,50,77,0.06);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-}
-
-.calendar__day--costa {
-  background: rgba(143,184,176,0.08);
-  border-color: rgba(47,127,150,0.12);
-}
-
-.calendar__date {
+/* --- CALENDAR OVERLAY --- */
+.day-nav__cal-btn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  line-height: 1.1;
+  justify-content: center;
+  border-radius: 50%;
+  color: rgba(255,255,255,0.7);
+  margin-left: 0.25rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.calendar__dow {
+.day-nav__cal-btn:hover { color: #fff; }
+
+.cal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: rgba(23,50,77,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.cal-overlay[hidden] { display: none; }
+
+.cal-overlay__panel {
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  padding: 1.25rem;
+  box-shadow: 0 16px 48px rgba(23,50,77,0.25);
+}
+
+.cal-overlay__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cal-overlay__header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #17324D;
+}
+
+.cal-overlay__close {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #243447;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cal-overlay__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.cal-overlay__dow {
   font-size: 0.65rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--med-blue);
-  letter-spacing: 0.03em;
+  color: #2F7F96;
+  padding-bottom: 0.4rem;
 }
 
-.calendar__num {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-heading);
-}
-
-.calendar__events {
+.cal-overlay__cell {
+  aspect-ratio: 1;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: #243447;
+  text-decoration: none;
 }
 
-.calendar__tag {
-  font-size: 0.68rem;
-  font-weight: 500;
-  padding: 0.15rem 0.45rem;
-  border-radius: 100px;
-  background: rgba(23,50,77,0.05);
-  color: var(--charcoal);
-  white-space: nowrap;
+.cal-overlay__cell--empty {
+  opacity: 0;
 }
 
-.calendar__tag--highlight {
-  background: rgba(182,106,60,0.12);
-  color: var(--terracotta);
-  font-weight: 600;
-}
-
-.calendar__tag--travel {
+.cal-overlay__cell--trip {
   background: rgba(47,127,150,0.1);
-  color: var(--med-blue);
   font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
 }
 
-.calendar__hotel {
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: var(--charcoal);
-  opacity: 0.6;
-  white-space: nowrap;
-  text-align: right;
+.cal-overlay__cell--trip:hover {
+  background: rgba(47,127,150,0.2);
+}
+
+.cal-overlay__cell--trip strong {
+  font-size: 0.9rem;
+  display: block;
+  color: #17324D;
+}
+
+.cal-overlay__cell--trip small {
+  font-size: 0.55rem;
+  font-weight: 500;
+  color: #2F7F96;
+  margin-top: 0.1rem;
+}
+
+.cal-overlay__cell--costa {
+  background: rgba(143,184,176,0.15);
+}
+
+.cal-overlay__cell--costa:hover {
+  background: rgba(143,184,176,0.25);
+}
+
+.cal-overlay__cell--costa small {
+  color: #8FB8B0;
 }
 
 /* --- BOOK FIRST --- */
@@ -843,11 +886,6 @@ a.chip {
 
   .glance__grid { grid-template-columns: repeat(7, 1fr); }
   .glance__card { padding: 1rem 0.5rem; }
-
-  .calendar__grid { grid-template-columns: repeat(7, 1fr); gap: 0.6rem; }
-  .calendar__day { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; text-align: center; padding: 0.75rem 0.5rem; }
-  .calendar__events { justify-content: center; }
-  .calendar__hotel { text-align: center; }
 
   .book-first__grid { grid-template-columns: repeat(2, 1fr); }
 
