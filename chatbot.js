@@ -8,7 +8,7 @@
 
   // --- CONFIG ---
   const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-  const MODEL = 'deepseek/deepseek-r1:free';
+  const MODEL = 'google/gemini-2.0-flash-001';
 
   const GITHUB_OWNER = 'apandya255';
   const GITHUB_REPO = 'Spain_2026_itinerary';
