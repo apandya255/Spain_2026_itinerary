@@ -8,7 +8,7 @@
       "date": "2026-08-11",
       "label": "Tue Aug 11",
       "base": "W Barcelona",
-      "theme": "Arrival, W Barcelona, Gothic Quarter & El Born",
+      "theme": "Arrival, W Barcelona, Gothic Quarter & El Born + Flamenco",
       "events": [
         {
           "time": "09:00",
@@ -60,14 +60,21 @@
         },
         {
           "time": "20:00",
-          "title": "Dinner in El Born",
-          "details": "Tapas-focused dinner in the neighbourhood's atmospheric narrow streets. Better first evening meal than returning to the W.",
+          "title": "Early Dinner in El Born",
+          "details": "Enjoy an earlier tapas-focused dinner in El Born to allow time for the flamenco show. Many venues offer dinner & show packages, or you can dine separately.",
           "location": "https://maps.google.com/?q=El+Born+Barcelona+restaurants"
         },
         {
-          "time": "22:00",
+          "time": "21:30",
+          "title": "Flamenco Show",
+          "details": "Experience the passion of a live flamenco performance. Consider venues like Tablao Flamenco Cordobes (La Rambla), Palau Dalmases (El Born), or Tablao de Carmen (Poble Espanyol, requires taxi). Book tickets in advance!",
+          "highlight": true,
+          "location": "https://maps.google.com/?q=Flamenco+Show+Barcelona"
+        },
+        {
+          "time": "23:00",
           "title": "Port Vell + Return to W",
-          "details": "Barcelona's old port — yachts, illuminated Columbus monument, waterfront promenade. Then taxi back to the W.",
+          "details": "Barcelona's old port — yachts, illuminated Columbus monument, waterfront promenade. Then taxi back to the W after the show.",
           "location": "https://maps.google.com/?q=Port+Vell+Barcelona"
         }
       ]
