@@ -416,8 +416,10 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
     const messages = document.getElementById('chat-messages');
 
     let savedScrollY = 0;
+    const isMobile = () => window.innerWidth < 768;
 
     function lockScroll() {
+      if (!isMobile()) return;
       savedScrollY = window.scrollY;
       document.documentElement.style.overflow = 'hidden';
       document.documentElement.style.height = '100%';
@@ -429,6 +431,7 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
     }
 
     function unlockScroll() {
+      if (!isMobile()) return;
       document.documentElement.style.overflow = '';
       document.documentElement.style.height = '';
       document.body.style.overflow = '';
