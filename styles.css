@@ -391,6 +391,79 @@ a.chip {
   margin-bottom: 0.3rem;
 }
 
+/* --- CONFIRMED BOOKINGS --- */
+.confirmed {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.confirmed__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+}
+
+.confirmed__card {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  background: var(--color-card);
+  border: 1px solid rgba(28,28,28,0.06);
+  border-left: 3px solid #4a9e6b;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.confirmed__icon {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4a9e6b;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.confirmed__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.confirmed__info h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 0.15rem;
+}
+
+.confirmed__info p {
+  font-size: 0.82rem;
+  color: var(--charcoal);
+  opacity: 0.75;
+  margin-bottom: 0.25rem;
+}
+
+.confirmed__ref {
+  font-size: 0.72rem;
+  color: var(--charcoal);
+  opacity: 0.6;
+}
+
+.confirmed__ref em {
+  font-style: normal;
+  color: var(--med-blue);
+}
+
+.confirmed__note {
+  margin-top: var(--space-md);
+  font-size: 0.75rem;
+  color: var(--charcoal);
+  opacity: 0.5;
+}
+
 /* --- DAY SECTIONS --- */
 .day-section {
   padding-bottom: var(--space-2xl);
