@@ -221,6 +221,12 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
           if (day) {
             const idx = c.insertIndex != null ? c.insertIndex : day.events.length;
             day.events.splice(idx, 0, c.event);
+            // Sort by time so it appears in the right chronological position
+            day.events.sort((a, b) => {
+              const timeA = a.time.replace(/[^0-9:]/g, '') || '99:99';
+              const timeB = b.time.replace(/[^0-9:]/g, '') || '99:99';
+              return timeA.localeCompare(timeB);
+            });
           }
         });
         break;
@@ -267,6 +273,12 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
             const [event] = fromDay.events.splice(c.eventIndex, 1);
             const idx = c.insertIndex != null ? c.insertIndex : toDay.events.length;
             toDay.events.splice(idx, 0, event);
+            // Sort by time
+            toDay.events.sort((a, b) => {
+              const timeA = a.time.replace(/[^0-9:]/g, '') || '99:99';
+              const timeB = b.time.replace(/[^0-9:]/g, '') || '99:99';
+              return timeA.localeCompare(timeB);
+            });
           }
         });
         break;
