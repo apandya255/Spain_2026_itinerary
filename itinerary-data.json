@@ -84,68 +84,104 @@
       "date": "2026-08-12",
       "label": "Wed Aug 12",
       "base": "W Barcelona",
-      "theme": "Sagrada Família, Passeig de Gràcia, Camp Nou & Gràcia",
+      "theme": "Gaudí, Gràcia & Casa Batlló Magical Night",
       "events": [
         {
           "time": "09:00",
           "title": "Breakfast at W Barcelona",
-          "details": "Hotel breakfast with Mediterranean sea views.",
+          "details": "Relaxed breakfast at the hotel. No aggressive start needed after your first full Barcelona day.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "10:30",
-          "title": "Sagrada Família Exterior",
-          "details": "Gaudí's unfinished masterpiece. We will admire its extraordinary facades and learn about its history from the outside. Allow ~45 minutes to an hour for viewing and photos.",
+          "time": "10:15",
+          "title": "Leave W Barcelona",
+          "details": "Taxi toward Sagrada Família.",
+          "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
+        },
+        {
+          "time": "10:45",
+          "title": "Sagrada Família",
+          "details": "See the basilica and walk around the exterior. If exterior-only, roughly an hour is plenty. One of Barcelona's most extraordinary buildings.",
+          "highlight": true,
           "location": "https://maps.google.com/?q=Sagrada+Familia+Barcelona"
         },
         {
-          "time": "11:30",
-          "title": "Avinguda de Gaudí",
-          "details": "Tree-lined pedestrian boulevard connecting Sagrada Família to Hospital de Sant Pau. Beautiful Art Nouveau hospital exterior. Coffee stop.",
+          "time": "11:45",
+          "title": "Walk Avinguda de Gaudí",
+          "details": "Walk northwest from Sagrada Família along this tree-lined pedestrian boulevard. Natural continuation rather than jumping into a taxi.",
           "location": "https://maps.google.com/?q=Avinguda+de+Gaudi+Barcelona"
         },
         {
           "time": "12:15",
-          "title": "Lunch in Eixample",
-          "details": "Barcelona's grid-plan neighbourhood. Wide sidewalk terraces, modernista buildings, excellent restaurant density.",
-          "location": "https://maps.google.com/?q=Eixample+Barcelona+restaurants"
+          "title": "Lunch near Sagrada / Lower Gràcia",
+          "details": "Eat here before continuing west. Don't return toward Passeig de Gràcia for lunch yet.",
+          "location": "https://maps.google.com/?q=Sagrada+Familia+Barcelona+restaurants"
         },
         {
-          "time": "13:45",
-          "title": "Passeig de Gràcia + La Pedrera / Casa Milà",
-          "details": "Walk Passeig de Gràcia, see the architecture and shops, and optionally do the rooftop at La Pedrera (Casa Milà). This makes the day more cohesive as you're already returning to Casa Batlló later.",
-          "highlight": true,
+          "time": "13:30",
+          "title": "Explore Gràcia",
+          "details": "Walk Plaça de la Vila de Gràcia, Carrer de Verdi, surrounding side streets. A distinctly different, village-like part of Barcelona away from tourist monuments.",
+          "location": "https://maps.google.com/?q=Placa+Vila+de+Gracia+Barcelona"
+        },
+        {
+          "time": "15:00",
+          "title": "Walk toward Passeig de Gràcia",
+          "details": "Head south from Gràcia toward the boulevard. ~20 minute walk.",
           "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
         },
         {
-          "time": "15:15",
-          "title": "Gràcia Neighborhood",
-          "details": "Walk up into Gràcia, explore Plaça de la Vila de Gràcia / Plaça del Sol, grab coffee, gelato, or a drink in this charming, bohemian district.",
-          "location": "https://maps.google.com/?q=Gracia+neighbourhood+Barcelona"
+          "time": "15:20",
+          "title": "La Pedrera / Passeig de Gràcia",
+          "details": "See Casa Milà and walk south along Passeig de Gràcia. Full interior tour optional — you already have the much more substantial Casa Batlló tonight.",
+          "location": "https://maps.google.com/?q=Casa+Mila+La+Pedrera+Barcelona"
         },
         {
           "time": "16:15",
-          "title": "W Barcelona — Pool & Rest",
-          "details": "Afternoon break to relax at the hotel, swim, or prepare for the evening.",
+          "title": "Return to W Barcelona",
+          "details": "Taxi back to the hotel. You've completed the sightseeing portion of the day.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "18:45",
-          "title": "Casa Batlló — Magical Nights",
-          "details": "Gold experience: rooftop concert at sunset inside Gaudí's masterpiece. Passeig de Gràcia, 43. Arrive a bit early to explore the building before the show.",
+          "time": "16:45",
+          "title": "Pool, Shower & Rest at W",
+          "details": "~1¾ hours at the hotel. Pool, beach, nap, get ready for the evening. This break makes the night its own event.",
+          "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
+        },
+        {
+          "time": "18:30",
+          "title": "Light Snack / Get Ready",
+          "details": "Do NOT schedule a major dinner here. Casa Batlló runs until ~22:00 — main dinner comes after.",
+          "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
+        },
+        {
+          "time": "19:10",
+          "title": "Leave W for Passeig de Gràcia",
+          "details": "Comfortable buffer rather than arriving at exactly 20:00.",
+          "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
+        },
+        {
+          "time": "19:40",
+          "title": "Arrive at Casa Batlló",
+          "details": "Exterior photos, get organized. 15-minute entry window from your booked time.",
+          "location": "https://maps.google.com/?q=Casa+Batllo+Barcelona"
+        },
+        {
+          "time": "20:00",
+          "title": "Casa Batlló Magical Nights — GOLD",
+          "details": "Centerpiece of the evening. 20:00: building visit and immersive experience begins. 21:00: rooftop concert starts. ~22:00: experience concludes. Passeig de Gràcia, 43.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Casa+Batllo+Barcelona"
         },
         {
-          "time": "20:45",
-          "title": "Post-Magic Night Drink / Stroll",
-          "details": "Enjoy a final drink on Passeig de Gràcia or a leisurely stroll back to the W Barcelona, soaking in the evening atmosphere.",
-          "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
+          "time": "22:10",
+          "title": "Late Dinner in Eixample",
+          "details": "Proper dinner after the show. You're already in one of Barcelona's best restaurant areas. A 22:15 dinner fits perfectly after the experience.",
+          "location": "https://maps.google.com/?q=Eixample+Barcelona+restaurants"
         },
         {
-          "time": "21:45",
+          "time": "23:30",
           "title": "Return to W Barcelona",
-          "details": "Taxi back to the hotel after a magical evening.",
+          "details": "Taxi back to the waterfront. End of a big day.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         }
       ]
