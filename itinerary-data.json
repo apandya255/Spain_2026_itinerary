@@ -8,7 +8,7 @@
       "date": "2026-08-11",
       "label": "Tue Aug 11",
       "base": "W Barcelona",
-      "theme": "Arrival, W Barcelona, Gothic Quarter & El Born + Flamenco",
+      "theme": "Arrival, Gothic Quarter, El Born & Flamenco",
       "events": [
         {
           "time": "09:00",
@@ -25,63 +25,56 @@
         {
           "time": "~11:00",
           "title": "Arrive at W Barcelona",
-          "details": "Drop luggage if room not ready. Do not book any timed attraction for the first morning.",
+          "details": "Drop luggage if room not ready. No timed attractions this morning.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
           "time": "11:30",
-          "title": "W Barcelona + Beachfront Walk",
-          "details": "Walk along Sant Sebastià Beach and Barceloneta promenade. Light snack or drink. A relaxed first look at Barcelona.",
+          "title": "Beachfront Walk + Snack",
+          "details": "Walk along Sant Sebastià Beach and Barceloneta promenade. Light snack or drink. Relaxed first look at Barcelona.",
           "location": "https://maps.google.com/?q=Sant+Sebastia+Beach+Barcelona"
         },
         {
           "time": "13:00",
           "title": "Lunch in Barceloneta",
-          "details": "Historic fishing neighborhood turned seafood dining hub. Croquetas, pan con tomate, grilled fish, tapas, rice dishes.",
+          "details": "First proper meal: croquetas, pan con tomate, grilled fish, tapas. Save the big paella for later.",
           "location": "https://maps.google.com/?q=Barceloneta+Barcelona"
         },
         {
           "time": "14:30",
+          "title": "W Barcelona Reset",
+          "details": "Room check-in, shower, nap, pool, or beach. Recharge before the evening.",
+          "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
+        },
+        {
+          "time": "15:00",
           "title": "Gothic Quarter",
-          "details": "Barcelona's medieval heart. Roman ruins, narrow stone alleys, 14th-century cathedral. Route: Plaça Reial → Carrer del Call → Plaça Sant Jaume → Cathedral → Pont del Bisbe → Temple of Augustus.",
+          "details": "Barcelona's medieval heart. Walk Plaça Reial → Carrer del Call → Plaça Sant Jaume → Cathedral → Pont del Bisbe → Plaça del Rei → Temple of Augustus. Stone alleys, 2,000 years of history, no tickets needed.",
           "location": "https://maps.google.com/?q=Barri+Gotic+Barcelona"
         },
         {
-          "time": "16:00",
-          "title": "El Born Exploration",
-          "details": "Trendy medieval quarter with boutiques, galleries, and Santa Maria del Mar — Barcelona's most beautiful Gothic church. Walk Passeig del Born and Carrer de Montcada. Focus on the atmosphere and architecture today.",
+          "time": "16:30",
+          "title": "El Born",
+          "details": "Walk east from Gothic Quarter into El Born. Santa Maria del Mar, Passeig del Born, Carrer de Montcada. Trendy quarter with boutiques and galleries. You'll end up right at Palau Dalmases.",
           "location": "https://maps.google.com/?q=El+Born+Barcelona"
-        },
-        {
-          "time": "17:30",
-          "title": "Pre-Flamenco Drink / Light Tapas",
-          "details": "Enjoy a relaxed drink or some light tapas in El Born before heading to the Flamenco show. This also serves as a buffer to get to the venue.",
-          "location": "https://maps.google.com/?q=El+Born+Barcelona+restaurants"
-        },
-        {
-          "time": "18:15",
-          "title": "Arrive at Flamenco Show",
-          "details": "Arrive 15-30 minutes before the show starts to find your seats and settle in. Book tickets in advance!",
-          "highlight": true,
-          "location": "https://maps.google.com/?q=Flamenco+Show+Barcelona"
         },
         {
           "time": "18:45",
           "title": "Flamenco — Palau Dalmases",
-          "details": "Intimate flamenco performance in a stunning 17th-century baroque palace. Zone A seating. Montcada, 20, El Born (next to Picasso Museum).",
+          "details": "Intimate flamenco performance in a stunning 17th-century baroque palace. Zone A seating. Montcada, 20 (next to Picasso Museum).",
           "highlight": true,
           "location": "https://maps.google.com/?q=Palau+Dalmases+Barcelona"
         },
         {
           "time": "20:00",
           "title": "Dinner in El Born",
-          "details": "Enjoy a tapas-focused dinner in El Born after the flamenco show. Many venues offer dinner & show packages, or you can dine separately.",
+          "details": "Tapas-focused dinner in El Born's atmospheric streets. You're already in the neighbourhood.",
           "location": "https://maps.google.com/?q=El+Born+Barcelona+restaurants"
         },
         {
-          "time": "21:45",
+          "time": "21:30",
           "title": "Port Vell + Return to W",
-          "details": "Barcelona's old port — yachts, illuminated Columbus monument, waterfront promenade. Then taxi back to the W after the show.",
+          "details": "Walk toward the harbour, then taxi back to the W. One drink at the hotel or straight to sleep.",
           "location": "https://maps.google.com/?q=Port+Vell+Barcelona"
         }
       ]
