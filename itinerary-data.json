@@ -84,7 +84,7 @@
       "date": "2026-08-12",
       "label": "Wed Aug 12",
       "base": "W Barcelona",
-      "theme": "Sagrada Família, Passeig de Gràcia, Casa Batlló & Gràcia",
+      "theme": "Sagrada Família, Passeig de Gràcia, Camp Nou & Gràcia",
       "events": [
         {
           "time": "09:00",
@@ -107,27 +107,21 @@
         },
         {
           "time": "13:30",
-          "title": "Passeig de Gràcia",
-          "details": "Barcelona's grandest boulevard. Luxury shopping, modernista architecture, Casa Milà (La Pedrera) exterior.",
-          "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
-        },
-        {
-          "time": "14:30",
           "title": "Lunch in Eixample",
           "details": "Barcelona's grid-plan neighbourhood. Wide sidewalk terraces, modernista buildings, excellent restaurant density.",
           "location": "https://maps.google.com/?q=Eixample+Barcelona+restaurants"
         },
         {
-          "time": "16:00",
-          "title": "Picasso Museum",
-          "details": "Explore the extensive collection of Pablo Picasso's early works, housed in five medieval palaces in the heart of El Born. Book tickets in advance to save time. Allow 1.5 - 2 hours for the visit.",
+          "time": "15:00",
+          "title": "Camp Nou Experience",
+          "details": "Visit the iconic home of FC Barcelona. Explore the museum, trophy room, player's tunnel, and pitch. A must for football fans! Allow 2-2.5 hours. Book tickets in advance.",
           "highlight": true,
-          "location": "https://maps.google.com/?q=Picasso+Museum+Barcelona"
+          "location": "https://maps.google.com/?q=Camp+Nou+Barcelona"
         },
         {
-          "time": "18:00",
+          "time": "17:30",
           "title": "W Barcelona — Pool & Rest",
-          "details": "Afternoon break to relax at the hotel, swim, or prepare for the evening. This provides a good reset after the museum.",
+          "details": "Afternoon break to relax at the hotel, swim, or prepare for the evening. This provides a good reset after the stadium visit.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
