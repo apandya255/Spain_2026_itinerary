@@ -48,16 +48,15 @@
         },
         {
           "time": "16:00",
-          "title": "El Born",
-          "details": "Trendy medieval quarter with boutiques, galleries, and Santa Maria del Mar — Barcelona's most beautiful Gothic church. Walk Passeig del Born and Carrer de Montcada.",
+          "title": "El Born Exploration",
+          "details": "Trendy medieval quarter with boutiques, galleries, and Santa Maria del Mar — Barcelona's most beautiful Gothic church. Walk Passeig del Born and Carrer de Montcada. Focus on the atmosphere and architecture today.",
           "location": "https://maps.google.com/?q=El+Born+Barcelona"
         },
         {
           "time": "17:30",
-          "title": "Picasso Museum",
-          "details": "Explore the extensive collection of Pablo Picasso's early works, housed in five medieval palaces in the heart of El Born. Book tickets in advance to save time. Allow 1.5 hours for the visit.",
-          "highlight": true,
-          "location": "https://maps.google.com/?q=Picasso+Museum+Barcelona"
+          "title": "Pre-Flamenco Drink / Light Tapas",
+          "details": "Enjoy a relaxed drink or some light tapas in El Born before heading to the Flamenco show. This also serves as a buffer to get to the venue.",
+          "location": "https://maps.google.com/?q=El+Born+Barcelona+restaurants"
         },
         {
           "time": "18:15",
@@ -103,7 +102,7 @@
         {
           "time": "10:30",
           "title": "Sagrada Família",
-          "details": "Gaudí's unfinished masterpiece — one of the most visited buildings on Earth. Soaring nave, forest-like columns, extraordinary stained glass. Allow 2 hours.",
+          "details": "Gaudí's unfinished masterpiece — one of the most visited buildings on Earth. Soaring nave, forest-like columns, extraordinary stained glass. Allow 2 hours. Book tickets well in advance!",
           "highlight": true,
           "location": "https://maps.google.com/?q=Sagrada+Familia+Barcelona"
         },
@@ -127,8 +126,15 @@
         },
         {
           "time": "16:00",
+          "title": "Picasso Museum",
+          "details": "Explore the extensive collection of Pablo Picasso's early works, housed in five medieval palaces in the heart of El Born. Book tickets in advance to save time. Allow 1.5 - 2 hours for the visit.",
+          "highlight": true,
+          "location": "https://maps.google.com/?q=Picasso+Museum+Barcelona"
+        },
+        {
+          "time": "18:00",
           "title": "W Barcelona — Pool & Rest",
-          "details": "Long afternoon break before the evening concert. Swim, nap, get ready for Magical Nights.",
+          "details": "Afternoon break to relax at the hotel, swim, or prepare for the evening. This provides a good reset after the museum.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
