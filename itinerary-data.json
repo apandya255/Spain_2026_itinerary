@@ -93,93 +93,69 @@
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "10:15",
-          "title": "Leave W Barcelona",
-          "details": "Taxi toward Sagrada Família.",
-          "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
-        },
-        {
-          "time": "10:45",
-          "title": "Sagrada Família",
+          "time": "10:15–11:45",
+          "title": "Taxi → Sagrada Família",
           "details": "See the basilica and walk around the exterior. If exterior-only, roughly an hour is plenty. One of Barcelona's most extraordinary buildings.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Sagrada+Familia+Barcelona"
         },
         {
-          "time": "11:45",
+          "time": "11:45–12:15",
           "title": "Walk Avinguda de Gaudí",
-          "details": "Walk northwest from Sagrada Família along this tree-lined pedestrian boulevard. Natural continuation rather than jumping into a taxi.",
+          "details": "Tree-lined pedestrian boulevard northwest from Sagrada Família. Natural continuation rather than jumping into a taxi.",
           "location": "https://maps.google.com/?q=Avinguda+de+Gaudi+Barcelona"
         },
         {
-          "time": "12:15",
+          "time": "12:15–13:30",
           "title": "Lunch near Sagrada / Lower Gràcia",
           "details": "Eat here before continuing west. Don't return toward Passeig de Gràcia for lunch yet.",
           "location": "https://maps.google.com/?q=Sagrada+Familia+Barcelona+restaurants"
         },
         {
-          "time": "13:30",
+          "time": "13:30–15:00",
           "title": "Explore Gràcia",
-          "details": "Walk Plaça de la Vila de Gràcia, Carrer de Verdi, surrounding side streets. A distinctly different, village-like part of Barcelona away from tourist monuments.",
+          "details": "Plaça de la Vila de Gràcia, Carrer de Verdi, surrounding side streets. A distinctly different, village-like part of Barcelona away from tourist monuments.",
           "location": "https://maps.google.com/?q=Placa+Vila+de+Gracia+Barcelona"
         },
         {
-          "time": "15:00",
-          "title": "Walk toward Passeig de Gràcia",
-          "details": "Head south from Gràcia toward the boulevard. ~20 minute walk.",
-          "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
-        },
-        {
-          "time": "15:20",
-          "title": "La Pedrera / Passeig de Gràcia",
-          "details": "See Casa Milà and walk south along Passeig de Gràcia. Full interior tour optional — you already have the much more substantial Casa Batlló tonight.",
+          "time": "15:20–16:15",
+          "title": "La Pedrera → Passeig de Gràcia",
+          "details": "Walk south: see Casa Milà exterior and stroll Passeig de Gràcia. Full interior tour optional — you have Casa Batlló tonight.",
           "location": "https://maps.google.com/?q=Casa+Mila+La+Pedrera+Barcelona"
         },
         {
-          "time": "16:15",
-          "title": "Return to W Barcelona",
-          "details": "Taxi back to the hotel. You've completed the sightseeing portion of the day.",
+          "time": "16:15–18:30",
+          "title": "Return to W → Pool & Rest",
+          "details": "Taxi back. ~2 hours at the hotel: pool, beach, shower, nap, get ready. The evening becomes its own event.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "16:45",
-          "title": "Pool, Shower & Rest at W",
-          "details": "~1¾ hours at the hotel. Pool, beach, nap, get ready for the evening. This break makes the night its own event.",
+          "time": "18:30–19:10",
+          "title": "Light snack → Get ready",
+          "details": "Do NOT schedule a major dinner. Casa Batlló runs until ~22:00 — main dinner comes after.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "18:30",
-          "title": "Light Snack / Get Ready",
-          "details": "Do NOT schedule a major dinner here. Casa Batlló runs until ~22:00 — main dinner comes after.",
-          "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
-        },
-        {
-          "time": "19:10",
-          "title": "Leave W for Passeig de Gràcia",
-          "details": "Comfortable buffer rather than arriving at exactly 20:00.",
-          "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
-        },
-        {
-          "time": "19:40",
-          "title": "Arrive at Casa Batlló",
-          "details": "Exterior photos, get organized. 15-minute entry window from your booked time.",
+          "time": "19:10–19:50",
+          "title": "Taxi → Arrive at Casa Batlló",
+          "details": "Comfortable buffer. Exterior photos, get organized. 15-minute entry window from booked time.",
           "location": "https://maps.google.com/?q=Casa+Batllo+Barcelona"
         },
         {
-          "time": "20:00",
+          "time": "20:00–22:00",
           "title": "Casa Batlló Magical Nights — GOLD",
-          "details": "Centerpiece of the evening. 20:00: building visit and immersive experience begins. 21:00: rooftop concert starts. ~22:00: experience concludes. Passeig de Gràcia, 43.",
+          "details": "Centerpiece of the evening. 20:00: building visit begins. 21:00: rooftop concert. ~22:00: concludes. Passeig de Gràcia, 43.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Casa+Batllo+Barcelona"
         },
         {
-          "time": "22:10",
+          "time": "22:10–23:15",
           "title": "Late Dinner in Eixample",
-          "details": "Proper dinner after the show. You're already in one of Barcelona's best restaurant areas. A 22:15 dinner fits perfectly after the experience.",
+          "details": "Proper dinner after the show. One of Barcelona's best restaurant areas. 22:15 dinner fits perfectly.",
           "location": "https://maps.google.com/?q=Eixample+Barcelona+restaurants"
         },
         {
-          "time": "23:30",
+          "time": "~23:30",
           "title": "Return to W Barcelona",
           "details": "Taxi back to the waterfront. End of a big day.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
