@@ -450,5 +450,53 @@
         }
       ]
     }
-  ]
+  ],
+  "bookings": {
+    "toBook": [
+      {
+        "id": "sagrada",
+        "title": "Sagrada Família",
+        "detail": "Early entry, Wednesday Aug 12",
+        "link": "https://sagradafamilia.org/en/tickets",
+        "priority": "urgent"
+      },
+      {
+        "id": "car",
+        "title": "Rental Car",
+        "detail": "Pickup Fri morning, return Sun morning",
+        "link": "https://www.rentalcars.com/searchresults?location=Barcelona",
+        "priority": "urgent"
+      },
+      {
+        "id": "dinner",
+        "title": "Farewell Dinner",
+        "detail": "Sunday evening, best meal of the trip",
+        "link": "https://www.thefork.com/city/barcelona/40612",
+        "priority": "flexible"
+      }
+    ],
+    "confirmed": [
+      {
+        "id": "flamenco",
+        "title": "Flamenco — Palau Dalmases (Zone A)",
+        "detail": "Tue Aug 11 at 18:45 · Montcada, 20, El Born",
+        "ref": "+34 618 15 48 67",
+        "refLabel": "Phone"
+      },
+      {
+        "id": "batllo",
+        "title": "Casa Batlló — Magical Nights (Gold)",
+        "detail": "Wed Aug 12 at 20:00 · 4 tickets · Passeig de Gràcia, 43",
+        "ref": "104479262",
+        "refLabel": "Locator"
+      },
+      {
+        "id": "guell",
+        "title": "Park Güell",
+        "detail": "Thu Aug 13 at 12:30 · 4 tickets",
+        "ref": "700519131417",
+        "refLabel": "Locator"
+      }
+    ]
+  }
 }

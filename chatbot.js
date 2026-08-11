@@ -50,6 +50,7 @@
       const content = new TextDecoder('utf-8').decode(bytes);
       itinerary = JSON.parse(content);
       rerenderItinerary();
+      rerenderBookings();
       console.log('Itinerary loaded from GitHub');
     } catch (err) {
       console.warn('GitHub load failed, using local fallback:', err.message);
@@ -62,6 +63,7 @@
       const res = await fetch('./itinerary-data.json');
       itinerary = await res.json();
       rerenderItinerary();
+      rerenderBookings();
     } catch (e) {
       console.error('Local fallback also failed:', e);
     }
@@ -154,6 +156,9 @@ Actions:
 - "swap_days": swap entire days. changes: [{dayIdA, dayIdB}].
 - "move_event": move between days. changes: [{fromDayId, eventIndex, toDayId}].
 - "replace_day": replace all events for a day. changes: [{dayId, theme (optional), events: [{time, title, details, location, highlight (optional)}]}]. Use for restructuring, time shifts, or major changes.
+- "confirm_booking": move something to the confirmed list. changes: [{title, detail, ref, refLabel, fromId (optional — id from toBook list to remove it from there)}].
+- "add_to_book": add a new suggestion to the "Still to Book" list. changes: [{id, title, detail, link (booking URL), priority ("urgent"/"recommended"/"flexible")}].
+- "remove_booking": remove from either list. changes: [{id}].
 - "none": no change, just a conversational answer.
 
 For changes, respond ONLY with valid JSON: {"action":"...", "changes":[...]}
@@ -175,7 +180,10 @@ TRIP CONTEXT:
 - Travel dates: August (hot, 30-33°C, tourist high season)
 
 Current itinerary:
-${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.base, theme: d.theme, events: d.events.map((e, i) => ({index: i, ...e}))})), null, 1)}`;
+${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.base, theme: d.theme, events: d.events.map((e, i) => ({index: i, ...e}))})), null, 1)}
+
+Current bookings:
+${JSON.stringify(itinerary.bookings || {toBook: [], confirmed: []}, null, 1)}`;
   }
 
   async function callGroq(userMessage) {
@@ -318,11 +326,54 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
         });
         break;
 
+      case 'confirm_booking':
+        // Move from toBook to confirmed, or add directly to confirmed
+        changes.forEach(c => {
+          if (!itinerary.bookings) itinerary.bookings = { toBook: [], confirmed: [] };
+          // Remove from toBook if it exists there
+          if (c.fromId) {
+            itinerary.bookings.toBook = itinerary.bookings.toBook.filter(b => b.id !== c.fromId);
+          }
+          // Add to confirmed
+          itinerary.bookings.confirmed.push({
+            id: c.id || Date.now().toString(),
+            title: c.title,
+            detail: c.detail,
+            ref: c.ref || '',
+            refLabel: c.refLabel || 'Confirmation'
+          });
+        });
+        break;
+
+      case 'add_to_book':
+        // Add a new item to the "Still to Book" list
+        changes.forEach(c => {
+          if (!itinerary.bookings) itinerary.bookings = { toBook: [], confirmed: [] };
+          itinerary.bookings.toBook.push({
+            id: c.id || Date.now().toString(),
+            title: c.title,
+            detail: c.detail,
+            link: c.link || '',
+            priority: c.priority || 'recommended'
+          });
+        });
+        break;
+
+      case 'remove_booking':
+        // Remove from either list
+        changes.forEach(c => {
+          if (!itinerary.bookings) return;
+          itinerary.bookings.toBook = itinerary.bookings.toBook.filter(b => b.id !== c.id);
+          itinerary.bookings.confirmed = itinerary.bookings.confirmed.filter(b => b.id !== c.id);
+        });
+        break;
+
       default:
         return;
     }
 
     rerenderItinerary();
+    rerenderBookings();
     // Persist to GitHub and report status
     saveToGitHub().then(success => {
       if (!success) {
@@ -382,6 +433,43 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
         });
       });
     });
+  }
+
+  // --- RE-RENDER BOOKINGS ---
+  function rerenderBookings() {
+    if (!itinerary || !itinerary.bookings) return;
+
+    // Render "Still to Book"
+    const toBookGrid = document.querySelector('.book-first__grid');
+    if (toBookGrid) {
+      toBookGrid.innerHTML = itinerary.bookings.toBook.map((b, i) => {
+        const priorityClass = b.priority === 'urgent' ? 'chip--urgent' : b.priority === 'flexible' ? 'chip--flexible' : 'chip--recommended';
+        const linkText = b.priority === 'urgent' ? 'Book now →' : b.priority === 'flexible' ? 'Browse →' : 'Recommended →';
+        return `
+          <article class="reservation-card is-revealed">
+            <span class="reservation-card__priority">${i + 1}</span>
+            <h3 class="reservation-card__title">${b.title}</h3>
+            <p class="reservation-card__detail">${b.detail}</p>
+            ${b.link ? `<a href="${b.link}" target="_blank" rel="noopener" class="chip ${priorityClass}">${linkText}</a>` : `<span class="chip ${priorityClass}">${b.priority}</span>`}
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Render "Confirmed"
+    const confirmedGrid = document.querySelector('.confirmed__grid');
+    if (confirmedGrid) {
+      confirmedGrid.innerHTML = itinerary.bookings.confirmed.map(b => `
+        <article class="confirmed__card is-revealed">
+          <div class="confirmed__icon">✓</div>
+          <div class="confirmed__info">
+            <h3>${b.title}</h3>
+            <p>${b.detail}</p>
+            ${b.ref ? `<span class="confirmed__ref">${b.refLabel || 'Confirmation'}: <em>${b.ref}</em></span>` : ''}
+          </div>
+        </article>
+      `).join('');
+    }
   }
 
   // --- CHAT UI ---
@@ -564,6 +652,9 @@ ${JSON.stringify(itinerary.days.map(d => ({id: d.id, label: d.label, base: d.bas
       case 'swap_days': return `✓ Swapped the days.`;
       case 'move_event': return `✓ Moved the event.`;
       case 'replace_day': return `✓ Rebuilt Day ${parsed.changes.map(c => c.dayId).join(', ')} with the new schedule.`;
+      case 'confirm_booking': return `✓ Moved to confirmed: ${parsed.changes.map(c => c.title).join(', ')}.`;
+      case 'add_to_book': return `✓ Added to booking list: ${parsed.changes.map(c => c.title).join(', ')}.`;
+      case 'remove_booking': return `✓ Removed from bookings.`;
       default: return `✓ Change applied.`;
     }
   }
