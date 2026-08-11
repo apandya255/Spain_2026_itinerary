@@ -55,25 +55,38 @@
         {
           "time": "17:30",
           "title": "Picasso Museum",
-          "details": "Explore the extensive collection of Pablo Picasso's early works, housed in five medieval palaces in the heart of El Born. Book tickets in advance to save time.",
+          "details": "Explore the extensive collection of Pablo Picasso's early works, housed in five medieval palaces in the heart of El Born. Book tickets in advance to save time. Allow 1.5 hours for the visit.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Picasso+Museum+Barcelona"
         },
         {
-          "time": "18:45",
-          "title": "Flamenco Show",
-          "details": "Experience the passion of a live flamenco performance. Consider venues like Tablao Flamenco Cordobes (La Rambla), Palau Dalmases (El Born), or Tablao de Carmen (Poble Espanyol, requires taxi). Book tickets in advance!",
+          "time": "19:00",
+          "title": "Pre-Flamenco Drink / Light Tapas",
+          "details": "Enjoy a relaxed drink or some light tapas in El Born before heading to the Flamenco show. This also serves as a buffer to get to the venue.",
+          "location": "https://maps.google.com/?q=El+Born+Barcelona+restaurants"
+        },
+        {
+          "time": "19:45",
+          "title": "Arrive at Flamenco Show",
+          "details": "Arrive 15-30 minutes before the show starts to find your seats and settle in. Book tickets in advance!",
           "highlight": true,
           "location": "https://maps.google.com/?q=Flamenco+Show+Barcelona"
         },
         {
           "time": "20:15",
+          "title": "Flamenco Show",
+          "details": "Experience the passion of a live flamenco performance. Consider venues like Tablao Flamenco Cordobes (La Rambla), Palau Dalmases (El Born), or Tablao de Carmen (Poble Espanyol, requires taxi).",
+          "highlight": true,
+          "location": "https://maps.google.com/?q=Flamenco+Show+Barcelona"
+        },
+        {
+          "time": "21:45",
           "title": "Dinner in El Born",
           "details": "Enjoy a tapas-focused dinner in El Born after the flamenco show. Many venues offer dinner & show packages, or you can dine separately.",
           "location": "https://maps.google.com/?q=El+Born+Barcelona+restaurants"
         },
         {
-          "time": "22:00",
+          "time": "23:00",
           "title": "Port Vell + Return to W",
           "details": "Barcelona's old port — yachts, illuminated Columbus monument, waterfront promenade. Then taxi back to the W after the show.",
           "location": "https://maps.google.com/?q=Port+Vell+Barcelona"
