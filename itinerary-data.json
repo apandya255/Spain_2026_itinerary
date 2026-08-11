@@ -42,37 +42,37 @@
         },
         {
           "time": "14:30",
-          "title": "W Barcelona Reset",
-          "details": "Use the hotel: room check-in, shower, nap, infinity pool, private beach, or WET deck. The W is worth actually enjoying.",
-          "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
-        },
-        {
-          "time": "17:00",
           "title": "Gothic Quarter",
           "details": "Barcelona's medieval heart. Roman ruins, narrow stone alleys, 14th-century cathedral. Route: Plaça Reial → Carrer del Call → Plaça Sant Jaume → Cathedral → Pont del Bisbe → Temple of Augustus.",
           "location": "https://maps.google.com/?q=Barri+Gotic+Barcelona"
         },
         {
-          "time": "18:30",
+          "time": "16:00",
           "title": "El Born",
           "details": "Trendy medieval quarter with boutiques, galleries, and Santa Maria del Mar — Barcelona's most beautiful Gothic church. Walk Passeig del Born and Carrer de Montcada.",
           "location": "https://maps.google.com/?q=El+Born+Barcelona"
         },
         {
-          "time": "20:00",
-          "title": "Early Dinner in El Born",
-          "details": "Enjoy an earlier tapas-focused dinner in El Born to allow time for the flamenco show. Many venues offer dinner & show packages, or you can dine separately.",
-          "location": "https://maps.google.com/?q=El+Born+Barcelona+restaurants"
+          "time": "17:30",
+          "title": "W Barcelona Reset",
+          "details": "Use the hotel: room check-in, shower, nap, infinity pool, private beach, or WET deck. The W is worth actually enjoying.",
+          "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "21:30",
+          "time": "18:45",
           "title": "Flamenco Show",
           "details": "Experience the passion of a live flamenco performance. Consider venues like Tablao Flamenco Cordobes (La Rambla), Palau Dalmases (El Born), or Tablao de Carmen (Poble Espanyol, requires taxi). Book tickets in advance!",
           "highlight": true,
           "location": "https://maps.google.com/?q=Flamenco+Show+Barcelona"
         },
         {
-          "time": "23:00",
+          "time": "20:15",
+          "title": "Dinner in El Born",
+          "details": "Enjoy a tapas-focused dinner in El Born after the flamenco show. Many venues offer dinner & show packages, or you can dine separately.",
+          "location": "https://maps.google.com/?q=El+Born+Barcelona+restaurants"
+        },
+        {
+          "time": "22:00",
           "title": "Port Vell + Return to W",
           "details": "Barcelona's old port — yachts, illuminated Columbus monument, waterfront promenade. Then taxi back to the W after the show.",
           "location": "https://maps.google.com/?q=Port+Vell+Barcelona"
