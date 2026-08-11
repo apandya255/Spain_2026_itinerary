@@ -113,15 +113,21 @@
         },
         {
           "time": "15:00",
-          "title": "Camp Nou Experience",
-          "details": "Visit the iconic home of FC Barcelona. Explore the museum, trophy room, player's tunnel, and pitch. A must for football fans! Allow 2-2.5 hours. Book tickets in advance.",
+          "title": "Passeig de Gràcia + La Pedrera / Casa Milà",
+          "details": "Walk Passeig de Gràcia, see the architecture and shops, and optionally do the rooftop at La Pedrera (Casa Milà). This makes the day more cohesive as you're already returning to Casa Batlló later.",
           "highlight": true,
-          "location": "https://maps.google.com/?q=Camp+Nou+Barcelona"
+          "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
+        },
+        {
+          "time": "16:30",
+          "title": "Gràcia Neighborhood",
+          "details": "Walk up into Gràcia, explore Plaça de la Vila de Gràcia / Plaça del Sol, grab coffee, gelato, or a drink in this charming, bohemian district.",
+          "location": "https://maps.google.com/?q=Gracia+neighbourhood+Barcelona"
         },
         {
           "time": "17:30",
           "title": "W Barcelona — Pool & Rest",
-          "details": "Afternoon break to relax at the hotel, swim, or prepare for the evening. This provides a good reset after the stadium visit.",
+          "details": "Afternoon break to relax at the hotel, swim, or prepare for the evening.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
