@@ -94,57 +94,56 @@
         },
         {
           "time": "10:30",
-          "title": "Sagrada Família",
-          "details": "Gaudí's unfinished masterpiece — one of the most visited buildings on Earth. Soaring nave, forest-like columns, extraordinary stained glass. Allow 2 hours. Book tickets well in advance!",
-          "highlight": true,
+          "title": "Sagrada Família Exterior",
+          "details": "Gaudí's unfinished masterpiece. We will admire its extraordinary facades and learn about its history from the outside. Allow ~45 minutes to an hour for viewing and photos.",
           "location": "https://maps.google.com/?q=Sagrada+Familia+Barcelona"
         },
         {
-          "time": "12:45",
+          "time": "11:30",
           "title": "Avinguda de Gaudí",
           "details": "Tree-lined pedestrian boulevard connecting Sagrada Família to Hospital de Sant Pau. Beautiful Art Nouveau hospital exterior. Coffee stop.",
           "location": "https://maps.google.com/?q=Avinguda+de+Gaudi+Barcelona"
         },
         {
-          "time": "13:30",
+          "time": "12:15",
           "title": "Lunch in Eixample",
           "details": "Barcelona's grid-plan neighbourhood. Wide sidewalk terraces, modernista buildings, excellent restaurant density.",
           "location": "https://maps.google.com/?q=Eixample+Barcelona+restaurants"
         },
         {
-          "time": "15:00",
+          "time": "13:45",
           "title": "Passeig de Gràcia + La Pedrera / Casa Milà",
           "details": "Walk Passeig de Gràcia, see the architecture and shops, and optionally do the rooftop at La Pedrera (Casa Milà). This makes the day more cohesive as you're already returning to Casa Batlló later.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
         },
         {
-          "time": "16:30",
+          "time": "15:15",
           "title": "Gràcia Neighborhood",
           "details": "Walk up into Gràcia, explore Plaça de la Vila de Gràcia / Plaça del Sol, grab coffee, gelato, or a drink in this charming, bohemian district.",
           "location": "https://maps.google.com/?q=Gracia+neighbourhood+Barcelona"
         },
         {
-          "time": "17:30",
+          "time": "16:15",
           "title": "W Barcelona — Pool & Rest",
           "details": "Afternoon break to relax at the hotel, swim, or prepare for the evening.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
         },
         {
-          "time": "20:00",
+          "time": "18:45",
           "title": "Casa Batlló — Magical Nights",
           "details": "Gold experience: rooftop concert at sunset inside Gaudí's masterpiece. Passeig de Gràcia, 43. Arrive a bit early to explore the building before the show.",
           "highlight": true,
           "location": "https://maps.google.com/?q=Casa+Batllo+Barcelona"
         },
         {
-          "time": "22:00",
+          "time": "20:45",
           "title": "Post-Magic Night Drink / Stroll",
           "details": "Enjoy a final drink on Passeig de Gràcia or a leisurely stroll back to the W Barcelona, soaking in the evening atmosphere.",
           "location": "https://maps.google.com/?q=Passeig+de+Gracia+Barcelona"
         },
         {
-          "time": "23:00",
+          "time": "21:45",
           "title": "Return to W Barcelona",
           "details": "Taxi back to the hotel after a magical evening.",
           "location": "https://maps.google.com/?q=W+Barcelona+Hotel"
