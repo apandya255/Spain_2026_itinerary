@@ -619,15 +619,20 @@ ${JSON.stringify(itinerary.bookings || {toBook: [], confirmed: []}, null, 1)}`;
           if (parsed.action === 'none') {
             appendMessage(parsed.message || cleaned, 'bot');
           } else {
-            applyChanges(parsed);
-            appendMessage(describeChanges(parsed), 'bot');
+            appendMessage('Applying change: ' + parsed.action + '...', 'bot');
+            try {
+              applyChanges(parsed);
+              appendMessage(describeChanges(parsed), 'bot');
+            } catch(applyErr) {
+              appendMessage('Error applying: ' + applyErr.message, 'bot');
+            }
             // On mobile, close chat after change so user sees the update
             if (window.innerWidth < 768) {
               setTimeout(() => {
                 panel.hidden = true;
                 toggle.hidden = false;
                 unlockScroll();
-              }, 1500);
+              }, 2000);
             }
           }
         } else {
