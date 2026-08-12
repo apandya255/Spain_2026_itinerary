@@ -383,6 +383,16 @@ ${JSON.stringify(itinerary.bookings || {toBook: [], confirmed: []}, null, 1)}`;
 
     rerenderItinerary();
     rerenderBookings();
+
+    // Scroll to the changed day so user sees the update
+    const changedDayId = changes[0] && (changes[0].dayId || changes[0].fromDayId);
+    if (changedDayId) {
+      const section = document.getElementById(`day-${changedDayId}`);
+      if (section) {
+        setTimeout(() => section.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
+      }
+    }
+
     // Persist to GitHub and report status
     saveToGitHub().then(success => {
       if (!success) {
@@ -611,6 +621,14 @@ ${JSON.stringify(itinerary.bookings || {toBook: [], confirmed: []}, null, 1)}`;
           } else {
             applyChanges(parsed);
             appendMessage(describeChanges(parsed), 'bot');
+            // On mobile, close chat after change so user sees the update
+            if (window.innerWidth < 768) {
+              setTimeout(() => {
+                panel.hidden = true;
+                toggle.hidden = false;
+                unlockScroll();
+              }, 1500);
+            }
           }
         } else {
           // No valid JSON action — show the reply as plain text conversation
