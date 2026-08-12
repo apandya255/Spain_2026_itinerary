@@ -606,6 +606,7 @@ ${JSON.stringify(itinerary.bookings || {toBook: [], confirmed: []}, null, 1)}`;
 
         // If we got valid parsed JSON with an action
         if (parsed && parsed.action) {
+          console.log('[Chatbot] Action:', parsed.action, parsed.changes ? parsed.changes.length + ' changes' : '');
           if (parsed.action === 'none') {
             appendMessage(parsed.message || cleaned, 'bot');
           } else {
@@ -613,8 +614,7 @@ ${JSON.stringify(itinerary.bookings || {toBook: [], confirmed: []}, null, 1)}`;
             appendMessage(describeChanges(parsed), 'bot');
           }
         } else {
-          // No valid JSON action — show the reply as plain text conversation
-          // Remove any leftover JSON artifacts
+          console.log('[Chatbot] No action detected, showing as text');
           let plainMsg = cleaned.replace(/^\{.*\}$/s, '').trim() || cleaned;
           appendMessage(plainMsg, 'bot');
         }
